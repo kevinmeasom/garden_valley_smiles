@@ -1,0 +1,5040 @@
+@charset "UTF-8";
+/*!
+Theme Name: Brandworx Theme
+Theme URI: http://underscores.me/
+Author: Brandworx Creative
+Author URI: https://brandworxcreative.com/
+Description: Brandworx Creative Custom Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: brandworx_theme
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Brandworx Theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;500;700&display=swap");
+/* line 11, sass/_normalize.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/* line 23, sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 32, sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 45, sass/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 56, sass/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/* line 68, sass/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 77, sass/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 87, sass/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 97, sass/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 108, sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 117, sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 125, sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 129, sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+/* line 140, sass/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 152, sass/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 168, sass/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 178, sass/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 187, sass/_normalize.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 198, sass/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 210, sass/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+/* line 221, sass/_normalize.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+/* line 232, sass/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 245, sass/_normalize.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+/* line 253, sass/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+/* line 262, sass/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 272, sass/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 282, sass/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+/* line 291, sass/_normalize.scss */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 300, sass/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+/* line 312, sass/_normalize.scss */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 320, sass/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+/* line 331, sass/_normalize.scss */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+/* line 339, sass/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* line 1, sass/typography/_typography.scss */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* line 1, sass/typography/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+/* line 1, sass/typography/_copy.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 5, sass/typography/_copy.scss */
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+/* line 9, sass/typography/_copy.scss */
+blockquote {
+  margin: 0 1.5em;
+}
+
+/* line 13, sass/typography/_copy.scss */
+address {
+  margin: 0 0 1.5em;
+}
+
+/* line 17, sass/typography/_copy.scss */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+/* line 28, sass/typography/_copy.scss */
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+/* line 33, sass/typography/_copy.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 38, sass/typography/_copy.scss */
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 43, sass/typography/_copy.scss */
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 1, sass/elements/_elements.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, sass/elements/_elements.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 11, sass/elements/_elements.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 15, sass/elements/_elements.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* line 1, sass/elements/_lists.scss */
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+/* line 5, sass/elements/_lists.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 9, sass/elements/_lists.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 13, sass/elements/_lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+/* line 19, sass/elements/_lists.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 23, sass/elements/_lists.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 24, sass/elements/_elements.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 29, sass/elements/_elements.scss */
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+/* line 1, sass/elements/_tables.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* line 1, sass/forms/_buttons.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+/* line 14, sass/forms/_buttons.scss */
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+/* line 18, sass/forms/_buttons.scss */
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+/* line 1, sass/forms/_fields.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+/* line 22, sass/forms/_fields.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+/* line 27, sass/forms/_fields.scss */
+select {
+  border: 1px solid #ccc;
+}
+
+/* line 31, sass/forms/_fields.scss */
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 1, sass/navigation/_links.scss */
+a {
+  color: royalblue;
+}
+/* line 4, sass/navigation/_links.scss */
+a:visited {
+  color: purple;
+}
+/* line 7, sass/navigation/_links.scss */
+a:hover, a:focus, a:active {
+  color: midnightblue;
+}
+/* line 12, sass/navigation/_links.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 15, sass/navigation/_links.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/* line 1, sass/navigation/_menus.scss */
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+}
+/* line 7, sass/navigation/_menus.scss */
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+/* line 13, sass/navigation/_menus.scss */
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -999em;
+  z-index: 99999;
+}
+/* line 21, sass/navigation/_menus.scss */
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+/* line 27, sass/navigation/_menus.scss */
+.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+/* line 33, sass/navigation/_menus.scss */
+.main-navigation ul ul a {
+  width: 200px;
+}
+/* line 46, sass/navigation/_menus.scss */
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+/* line 52, sass/navigation/_menus.scss */
+.main-navigation li {
+  float: left;
+  position: relative;
+}
+/* line 61, sass/navigation/_menus.scss */
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Small menu. */
+/* line 74, sass/navigation/_menus.scss */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 80, sass/navigation/_menus.scss */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* line 83, sass/navigation/_menus.scss */
+  .main-navigation ul {
+    display: block;
+  }
+}
+/* line 92, sass/navigation/_menus.scss */
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+/* line 97, sass/navigation/_menus.scss */
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+/* line 102, sass/navigation/_menus.scss */
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, sass/modules/_accessibility.scss */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+/* line 14, sass/modules/_accessibility.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+/* line 36, sass/modules/_accessibility.scss */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 1, sass/modules/_alignments.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 7, sass/modules/_alignments.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 13, sass/modules/_alignments.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 1, sass/modules/_clearings.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 16, sass/modules/_clearings.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 1, sass/site/secondary/_widgets.scss */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+/* line 5, sass/site/secondary/_widgets.scss */
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 1, sass/site/primary/_posts-and-pages.scss */
+.sticky {
+  display: block;
+}
+
+/* line 5, sass/site/primary/_posts-and-pages.scss */
+.post,
+.page {
+  margin: 0 0 1.5em;
+}
+
+/* line 10, sass/site/primary/_posts-and-pages.scss */
+.updated:not(.published) {
+  display: none;
+}
+
+/* line 14, sass/site/primary/_posts-and-pages.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+/* line 20, sass/site/primary/_posts-and-pages.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 1, sass/site/primary/_comments.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 4, sass/site/primary/_comments.scss */
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 2, sass/modules/_infinite-scroll.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, sass/modules/_infinite-scroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 1, sass/media/_media.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 11, sass/media/_media.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+/* line 18, sass/media/_media.scss */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 1, sass/media/_captions.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+/* line 5, sass/media/_captions.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 9, sass/media/_captions.scss */
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+/* line 14, sass/media/_captions.scss */
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 1, sass/media/_galleries.scss */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+/* line 5, sass/media/_galleries.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+/* line 13, sass/media/_galleries.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+/* line 19, sass/media/_galleries.scss */
+.gallery-caption {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Brandworx Styles
+--------------------------------------------------------------*/
+/* line 116, brandworx/styles/_vars.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 100;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/* line 129, brandworx/styles/_vars.scss */
+#contact_section .contact-container .contact-form h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/* line 136, brandworx/styles/_vars.scss */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+/* line 142, brandworx/styles/_vars.scss */
+p a, a, a.alt-link, .entry-footer a, #shop_page .shop-nav #shop_menu li a, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title, a.share-icon, .share-icons .social-share .share, .share-icons .social-share .share a, a.white-link, .site-disclaimer a, #testimonials a, a.nav-link, #masthead a, .mobile-nav-outer a, #colophon .mobile-nav-outer a, #colophon a, #masthead #primary_left_menu li .sub-menu, #masthead.lock_nav .site-navigation-wrap #primary-menu li .sub-menu, #masthead .site-navigation-wrap #primary_menu li .sub-menu, #masthead #primary-menu li .sub-menu, #shop_page .shop-nav #shop_menu li .sub-menu, #footer_menu_container #footer_menu li .sub-menu, #colophon #footer_menu li .sub-menu, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li .sub-menu, .product .product-wrap .product-image-wrap > .fade, .share-icons .social-share .social-share-inner.fade-share > .fade, .animate-right > *, #contact_page .contact-wrapper .contact-body nf-field .submit-wrap .nf-field-element > *, .animate-right > .icon, #contact_page .contact-wrapper .contact-body nf-field .submit-wrap .nf-field-element > .icon, .alm-btn-wrap .alm-load-more-btn span, #masthead, #masthead #primary-menu li, #cta_blocks .cta-block .cta-wrap {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+/* line 149, brandworx/styles/_vars.scss */
+p a {
+  color: #336699;
+  outline: none;
+  text-decoration: none;
+}
+/* line 155, brandworx/styles/_vars.scss */
+p a .icon {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+/* line 162, brandworx/styles/_vars.scss */
+p a:focus, p a:active, p a:visited {
+  color: #336699;
+}
+/* line 166, brandworx/styles/_vars.scss */
+p a:hover {
+  cursor: pointer;
+  color: #444444;
+}
+
+/* line 172, brandworx/styles/_vars.scss */
+a, a.alt-link, .entry-footer a, #shop_page .shop-nav #shop_menu li a, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title, a.share-icon, .share-icons .social-share .share, .share-icons .social-share .share a {
+  color: #444444;
+  outline: none;
+  text-decoration: none;
+}
+/* line 178, brandworx/styles/_vars.scss */
+a .icon, #shop_page .shop-nav #shop_menu li a .icon, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand .icon, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title .icon, .share-icons .social-share .share .icon {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+/* line 185, brandworx/styles/_vars.scss */
+a:focus, #shop_page .shop-nav #shop_menu li a:focus, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand:focus, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title:focus, .share-icons .social-share .share:focus, .share-icons .social-share .share a:focus, a:active, #shop_page .shop-nav #shop_menu li a:active, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand:active, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title:active, .share-icons .social-share .share:active, .share-icons .social-share .share a:active, a:visited, #shop_page .shop-nav #shop_menu li a:visited, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand:visited, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title:visited, .share-icons .social-share .share:visited, .share-icons .social-share .share a:visited {
+  color: #444444;
+}
+/* line 189, brandworx/styles/_vars.scss */
+a:hover, #shop_page .shop-nav #shop_menu li a:hover, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand:hover, #shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title:hover, .share-icons .social-share .share:hover, .share-icons .social-share .share a:hover {
+  cursor: pointer;
+  color: #336699;
+}
+
+/* line 195, brandworx/styles/_vars.scss */
+a.white-link, .site-disclaimer a, #testimonials a {
+  color: #ffffff;
+  outline: none;
+  text-decoration: none;
+}
+/* line 201, brandworx/styles/_vars.scss */
+a.white-link .icon, .site-disclaimer a .icon, #testimonials a .icon {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+/* line 208, brandworx/styles/_vars.scss */
+a.white-link:focus, .site-disclaimer a:focus, #testimonials a:focus, a.white-link:active, .site-disclaimer a:active, #testimonials a:active, a.white-link:visited, .site-disclaimer a:visited, #testimonials a:visited {
+  color: #ffffff;
+}
+/* line 212, brandworx/styles/_vars.scss */
+a.white-link:hover, .site-disclaimer a:hover, #testimonials a:hover {
+  cursor: pointer;
+  color: #336699;
+}
+
+/* line 252, brandworx/styles/_vars.scss */
+a.nav-link, #masthead a, .mobile-nav-outer a, #colophon .mobile-nav-outer a {
+  color: #336699;
+  outline: none;
+  text-decoration: none;
+}
+/* line 258, brandworx/styles/_vars.scss */
+a.nav-link .icon, #masthead a .icon, .mobile-nav-outer a .icon, #colophon .mobile-nav-outer a .icon {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+/* line 265, brandworx/styles/_vars.scss */
+a.nav-link:focus, #masthead a:focus, .mobile-nav-outer a:focus, #colophon .mobile-nav-outer a:focus, a.nav-link:active, #masthead a:active, .mobile-nav-outer a:active, #colophon .mobile-nav-outer a:active, a.nav-link:visited, #masthead a:visited, .mobile-nav-outer a:visited, #colophon .mobile-nav-outer a:visited {
+  color: #336699;
+}
+/* line 269, brandworx/styles/_vars.scss */
+a.nav-link:hover, #masthead a:hover, .mobile-nav-outer a:hover, #colophon .mobile-nav-outer a:hover {
+  cursor: pointer;
+  color: #336699;
+}
+
+/* line 275, brandworx/styles/_vars.scss */
+#colophon a {
+  color: #444444;
+  outline: none;
+  text-decoration: underline;
+}
+/* line 281, brandworx/styles/_vars.scss */
+#colophon a .icon {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+/* line 288, brandworx/styles/_vars.scss */
+#colophon a:focus, #colophon a:active, #colophon a:visited {
+  color: #444444;
+}
+/* line 292, brandworx/styles/_vars.scss */
+#colophon a:hover {
+  cursor: pointer;
+  color: #336699;
+}
+
+/* line 369, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu, #masthead.lock_nav .site-navigation-wrap #primary-menu, #masthead .site-navigation-wrap #primary_menu, #masthead #primary-menu, #shop_page .shop-nav #shop_menu, #footer_menu_container #footer_menu, #colophon #footer_menu, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu {
+  display: -webkit-flex;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  font-size: 18px;
+}
+/* line 379, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li, #masthead.lock_nav .site-navigation-wrap #primary-menu li, #masthead .site-navigation-wrap #primary_menu li, #masthead #primary-menu li, #shop_page .shop-nav #shop_menu li, #footer_menu_container #footer_menu li, #colophon #footer_menu li, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li {
+  position: relative;
+  float: none;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+/* line 385, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li .sub-menu, #masthead.lock_nav .site-navigation-wrap #primary-menu li .sub-menu, #masthead .site-navigation-wrap #primary_menu li .sub-menu, #masthead #primary-menu li .sub-menu, #shop_page .shop-nav #shop_menu li .sub-menu, #footer_menu_container #footer_menu li .sub-menu, #colophon #footer_menu li .sub-menu, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li .sub-menu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  list-style: none;
+  transform: translate(-35%, 0);
+  top: 100%;
+  text-align: left;
+  padding: 15px 30px;
+  background: #ffffff;
+  white-space: nowrap;
+  box-shadow: unset;
+  z-index: 100;
+}
+/* line 401, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li .sub-menu li, #masthead.lock_nav .site-navigation-wrap #primary-menu li .sub-menu li, #masthead .site-navigation-wrap #primary_menu li .sub-menu li, #masthead #primary-menu li .sub-menu li, #shop_page .shop-nav #shop_menu li .sub-menu li, #footer_menu_container #footer_menu li .sub-menu li, #colophon #footer_menu li .sub-menu li, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li .sub-menu li {
+  padding: 5px 0;
+}
+/* line 405, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li .sub-menu a, #masthead.lock_nav .site-navigation-wrap #primary-menu li .sub-menu a, #masthead .site-navigation-wrap #primary_menu li .sub-menu a, #masthead #primary-menu li .sub-menu a, #shop_page .shop-nav #shop_menu li .sub-menu a, #footer_menu_container #footer_menu li .sub-menu a, #colophon #footer_menu li .sub-menu a, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li .sub-menu a {
+  width: auto;
+}
+/* line 411, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li:hover > a, #masthead.lock_nav .site-navigation-wrap #primary-menu li:hover > a, #masthead .site-navigation-wrap #primary_menu li:hover > a, #masthead #primary-menu li:hover > a, #shop_page .shop-nav #shop_menu li:hover > a, #footer_menu_container #footer_menu li:hover > a, #colophon #footer_menu li:hover > a, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li:hover > a {
+  text-decoration: underline;
+}
+/* line 414, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li:hover .sub-menu, #masthead .site-navigation-wrap #primary_menu li:hover .sub-menu, #masthead #primary-menu li:hover .sub-menu, #shop_page .shop-nav #shop_menu li:hover .sub-menu, #footer_menu_container #footer_menu li:hover .sub-menu, #colophon #footer_menu li:hover .sub-menu, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 421, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li.current-menu-item > a, #masthead.lock_nav .site-navigation-wrap #primary-menu li.current-menu-item > a, #masthead .site-navigation-wrap #primary_menu li.current-menu-item > a, #masthead #primary-menu li.current-menu-item > a, #shop_page .shop-nav #shop_menu li.current-menu-item > a, #footer_menu_container #footer_menu li.current-menu-item > a, #colophon #footer_menu li.current-menu-item > a, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li.current-menu-item > a {
+  font-weight: 500;
+  text-decoration: underline;
+}
+/* line 427, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li .icon, #masthead.lock_nav .site-navigation-wrap #primary-menu li .icon, #masthead .site-navigation-wrap #primary_menu li .icon, #masthead #primary-menu li .icon, #shop_page .shop-nav #shop_menu li .icon, #footer_menu_container #footer_menu li .icon, #colophon #footer_menu li .icon, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li .icon {
+  position: relative;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  margin-left: 4px;
+}
+/* line 436, brandworx/styles/_vars.scss */
+#masthead #primary_left_menu li.menu-item-header > .menu-item-header, #masthead .site-navigation-wrap #primary_menu li.menu-item-header > .menu-item-header, #masthead #primary-menu li.menu-item-header > .menu-item-header, #shop_page .shop-nav #shop_menu li.menu-item-header > .menu-item-header, #footer_menu_container #footer_menu li.menu-item-header > .menu-item-header, #colophon #footer_menu li.menu-item-header > .menu-item-header, .mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu li.menu-item-header > .menu-item-header {
+  font-weight: bold;
+}
+
+/* line 443, brandworx/styles/_vars.scss */
+.container, #contact_section .contact-container {
+  width: 85%;
+  max-width: 960px;
+  margin: 0 auto !important;
+}
+
+/* line 448, brandworx/styles/_vars.scss */
+.container-sm {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto !important;
+}
+
+/* line 453, brandworx/styles/_vars.scss */
+.container-md {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto !important;
+}
+
+/* line 458, brandworx/styles/_vars.scss */
+.container-lg, .archive-item, .page-banner .entry-header {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto !important;
+}
+
+/* line 463, brandworx/styles/_vars.scss */
+.container-xl, #testimonials .testimonials-container, #content_rows .content-rows-container .content-row .content-row-inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto !important;
+}
+
+/* line 472, brandworx/styles/_vars.scss */
+.product .product-wrap .product-image-wrap > .fade, .share-icons .social-share .social-share-inner.fade-share > .fade {
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 480, brandworx/styles/_vars.scss */
+.product .product-wrap .product-image-wrap:hover > .fade, .share-icons .social-share .social-share-inner.fade-share:hover > .fade {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 487, brandworx/styles/_vars.scss */
+a.btn-primary, .btn-primary, .modal .modal-box .modal-inner input[type="button"], .modal #mc-embedded-subscribe-form input[type="submit"], .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"], #search-modal .modal-box .modal-inner input[type="submit"], #contact_section .contact-container .contact-form form nf-field input[type="button"], #contact_section .contact-container .contact-form form nf-field input[type="submit"], a.btn-secondary, .btn-secondary, a.btn-tertiary, .btn-tertiary, a.btn, .btn {
+  display: inline-block !important;
+  padding: 12px 40px !important;
+  border-radius: 100px !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  box-shadow: 0px 5px 7px 2px rgba(68, 68, 68, 0.1) !important;
+}
+/* line 499, brandworx/styles/_vars.scss */
+.btn-primary:hover, .modal .modal-box .modal-inner input[type="button"]:hover, .modal #mc-embedded-subscribe-form input[type="submit"]:hover, .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"]:hover, #search-modal .modal-box .modal-inner input[type="submit"]:hover, #contact_section .contact-container .contact-form form nf-field input[type="button"]:hover, #contact_section .contact-container .contact-form form nf-field input[type="submit"]:hover, .btn-secondary:hover, .btn-tertiary:hover, .btn:hover {
+  box-shadow: 0px 5px 7px 2px rgba(68, 68, 68, 0.5) !important;
+}
+@media screen and (max-width: 1200px) {
+  /* line 487, brandworx/styles/_vars.scss */
+  a.btn-primary, .btn-primary, .modal .modal-box .modal-inner input[type="button"], .modal #mc-embedded-subscribe-form input[type="submit"], .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"], #search-modal .modal-box .modal-inner input[type="submit"], #contact_section .contact-container .contact-form form nf-field input[type="button"], #contact_section .contact-container .contact-form form nf-field input[type="submit"], a.btn-secondary, .btn-secondary, a.btn-tertiary, .btn-tertiary, a.btn, .btn {
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+  }
+}
+
+/* line 509, brandworx/styles/_vars.scss */
+a.btn-primary, .btn-primary, .modal .modal-box .modal-inner input[type="button"], .modal #mc-embedded-subscribe-form input[type="submit"], .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"], #search-modal .modal-box .modal-inner input[type="submit"], #contact_section .contact-container .contact-form form nf-field input[type="button"], #contact_section .contact-container .contact-form form nf-field input[type="submit"] {
+  background: #FFCC33 !important;
+  border: 2px solid #FFCC33 !important;
+  color: #444444 !important;
+}
+/* line 515, brandworx/styles/_vars.scss */
+.btn-primary a, .modal .modal-box .modal-inner input[type="button"] a, .modal #mc-embedded-subscribe-form input[type="submit"] a, .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"] a, #search-modal .modal-box .modal-inner input[type="submit"] a, #contact_section .contact-container .contact-form form nf-field input[type="button"] a, #contact_section .contact-container .contact-form form nf-field input[type="submit"] a {
+  color: #444444 !important;
+}
+/* line 519, brandworx/styles/_vars.scss */
+.btn-primary .icon, .modal .modal-box .modal-inner input[type="button"] .icon, .modal #mc-embedded-subscribe-form input[type="submit"] .icon, .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"] .icon, #search-modal .modal-box .modal-inner input[type="submit"] .icon, #contact_section .contact-container .contact-form form nf-field input[type="button"] .icon, #contact_section .contact-container .contact-form form nf-field input[type="submit"] .icon, .icon.btn-primary, .modal .modal-box .modal-inner input.icon[type="button"], .modal #mc-embedded-subscribe-form input.icon[type="submit"], .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input.icon[value="Submit"][type="button"], #search-modal .modal-box .modal-inner input.icon[type="submit"], #contact_section .contact-container .contact-form form nf-field input.icon[type="button"], #contact_section .contact-container .contact-form form nf-field input.icon[type="submit"] {
+  fill: #444444 !important;
+}
+/* line 524, brandworx/styles/_vars.scss */
+.btn-primary:hover, .modal .modal-box .modal-inner input[type="button"]:hover, .modal #mc-embedded-subscribe-form input[type="submit"]:hover, .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"]:hover, #search-modal .modal-box .modal-inner input[type="submit"]:hover, #contact_section .contact-container .contact-form form nf-field input[type="button"]:hover, #contact_section .contact-container .contact-form form nf-field input[type="submit"]:hover {
+  background: #336699 !important;
+  border: 2px solid #336699 !important;
+  color: #FFFFFF !important;
+}
+/* line 529, brandworx/styles/_vars.scss */
+.btn-primary:hover a, .modal .modal-box .modal-inner input[type="button"]:hover a, .modal #mc-embedded-subscribe-form input[type="submit"]:hover a, .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"]:hover a, #search-modal .modal-box .modal-inner input[type="submit"]:hover a, #contact_section .contact-container .contact-form form nf-field input[type="button"]:hover a, #contact_section .contact-container .contact-form form nf-field input[type="submit"]:hover a {
+  color: #FFFFFF !important;
+}
+/* line 533, brandworx/styles/_vars.scss */
+.btn-primary:hover .icon, .modal .modal-box .modal-inner input[type="button"]:hover .icon, .modal #mc-embedded-subscribe-form input[type="submit"]:hover .icon, .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input[value="Submit"][type="button"]:hover .icon, #search-modal .modal-box .modal-inner input[type="submit"]:hover .icon, #contact_section .contact-container .contact-form form nf-field input[type="button"]:hover .icon, #contact_section .contact-container .contact-form form nf-field input[type="submit"]:hover .icon {
+  fill: #FFFFFF !important;
+}
+
+/* line 540, brandworx/styles/_vars.scss */
+a.btn-secondary, .btn-secondary {
+  background: #FAFAFA !important;
+  border: 2px solid #FAFAFA !important;
+  color: #444444 !important;
+}
+/* line 546, brandworx/styles/_vars.scss */
+.btn-secondary a {
+  color: #444444 !important;
+}
+/* line 550, brandworx/styles/_vars.scss */
+.btn-secondary .icon, .icon.btn-secondary {
+  fill: #444444 !important;
+}
+/* line 555, brandworx/styles/_vars.scss */
+.btn-secondary:hover {
+  background: #336699 !important;
+  border: 2px solid #336699 !important;
+  color: #FFFFFF !important;
+}
+/* line 560, brandworx/styles/_vars.scss */
+.btn-secondary:hover a {
+  color: #FFFFFF !important;
+}
+/* line 564, brandworx/styles/_vars.scss */
+.btn-secondary:hover .icon {
+  fill: #FFFFFF !important;
+}
+
+/* line 570, brandworx/styles/_vars.scss */
+a.btn-tertiary, .btn-tertiary {
+  background: #336699 !important;
+  border: 2px solid #336699 !important;
+  color: #FFFFFF !important;
+}
+/* line 576, brandworx/styles/_vars.scss */
+.btn-tertiary a {
+  color: #FFFFFF !important;
+}
+/* line 580, brandworx/styles/_vars.scss */
+.btn-tertiary .icon, .icon.btn-tertiary {
+  fill: #FFFFFF !important;
+}
+/* line 585, brandworx/styles/_vars.scss */
+.btn-tertiary:hover {
+  background: #FAFAFA !important;
+  border: 2px solid #FAFAFA !important;
+  color: #444444 !important;
+}
+/* line 590, brandworx/styles/_vars.scss */
+.btn-tertiary:hover a {
+  color: #444444 !important;
+}
+/* line 594, brandworx/styles/_vars.scss */
+.btn-tertiary:hover .icon {
+  fill: #444444 !important;
+}
+
+/* line 600, brandworx/styles/_vars.scss */
+.animate-right, #contact_page .contact-wrapper .contact-body nf-field .submit-wrap .nf-field-element {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+/* line 612, brandworx/styles/_vars.scss */
+.animate-right > .icon, #contact_page .contact-wrapper .contact-body nf-field .submit-wrap .nf-field-element > .icon {
+  margin-left: 5px;
+}
+/* line 619, brandworx/styles/_vars.scss */
+.animate-right:hover > .icon, #contact_page .contact-wrapper .contact-body nf-field .submit-wrap .nf-field-element:hover > .icon {
+  transform: translate(10px, 0);
+}
+
+/* line 625, brandworx/styles/_vars.scss */
+.adjust-center {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+/* line 628, brandworx/styles/_vars.scss */
+.adjust-center > * {
+  flex: 1;
+}
+/* line 631, brandworx/styles/_vars.scss */
+.adjust-center > *:nth-child(1) {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  margin-right: auto;
+}
+/* line 636, brandworx/styles/_vars.scss */
+.adjust-center > *:nth-child(2) {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  flex: 2;
+}
+/* line 641, brandworx/styles/_vars.scss */
+.adjust-center > *:nth-child(3) {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-end !important;
+  -webkit-justify-content: flex-end !important;
+  margin-left: auto;
+}
+
+/* line 3, brandworx/styles/_general.scss */
+body {
+  color: #444444;
+}
+
+/* line 8, brandworx/styles/_general.scss */
+.post, .page {
+  margin: 0;
+}
+
+/* line 12, brandworx/styles/_general.scss */
+#page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 18, brandworx/styles/_general.scss */
+#primary .content-wrapper {
+  padding: 60px 0;
+}
+/* line 21, brandworx/styles/_general.scss */
+#primary .content-wrapper .entry-header {
+  margin-bottom: 60px;
+}
+/* line 26, brandworx/styles/_general.scss */
+#primary .content-wrapper .entry-content p {
+  margin-bottom: 20px;
+}
+
+/* line 34, brandworx/styles/_general.scss */
+.no-results .page-content {
+  text-align: center;
+}
+
+/* line 47, brandworx/styles/_general.scss */
+h1 {
+  font-size: 48px;
+}
+
+/* line 51, brandworx/styles/_general.scss */
+h2 {
+  font-size: 32px;
+}
+
+/* line 55, brandworx/styles/_general.scss */
+h3 {
+  font-size: 24px;
+}
+
+/* line 59, brandworx/styles/_general.scss */
+h4 {
+  font-size: 20px;
+}
+
+/* line 63, brandworx/styles/_general.scss */
+h5 {
+  font-size: 16px;
+}
+
+/* line 67, brandworx/styles/_general.scss */
+h6 {
+  font-size: 16px;
+}
+
+/* line 86, brandworx/styles/_general.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 91, brandworx/styles/_general.scss */
+p {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+}
+/* line 97, brandworx/styles/_general.scss */
+p a {
+  font-weight: bold;
+}
+
+/* line 103, brandworx/styles/_general.scss */
+ul, ol {
+  margin: 0;
+}
+
+/* line 107, brandworx/styles/_general.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  border: 1px solid #E3E3E3 !important;
+  border-radius: 0 !important;
+  padding: 5px 10px;
+  background: unset;
+}
+
+/* line 129, brandworx/styles/_general.scss */
+button, input, input[type="button"], input[type="reset"], input[type="submit"] {
+  box-shadow: unset !important;
+  background: unset;
+  border: unset;
+  border-radius: 0 !important;
+  padding: unset;
+  font-size: .90rem;
+}
+/* line 137, brandworx/styles/_general.scss */
+button:focus, input:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+  outline: none !important;
+}
+
+/* line 142, brandworx/styles/_general.scss */
+.anchor {
+  scroll-margin-top: 200px;
+}
+
+/* line 146, brandworx/styles/_general.scss */
+.site-search {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  padding: 50px 50px 20px;
+}
+/* line 150, brandworx/styles/_general.scss */
+.site-search .basic-search-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* line 155, brandworx/styles/_general.scss */
+.site-search .basic-search-form .search-fields {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 158, brandworx/styles/_general.scss */
+.site-search .basic-search-form .search-fields input {
+  flex: 1;
+}
+/* line 161, brandworx/styles/_general.scss */
+.site-search .basic-search-form .search-fields input[type="submit"] {
+  flex: 0;
+}
+
+/* line 173, brandworx/styles/_general.scss */
+.signature {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  margin: 20px 0;
+}
+
+/* line 180, brandworx/styles/_general.scss */
+.script-font {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* line 184, brandworx/styles/_general.scss */
+.lazy {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 190, brandworx/styles/_general.scss */
+.lazy-contain {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* line 196, brandworx/styles/_general.scss */
+.line-sep {
+  position: relative;
+  width: 1px;
+  min-height: 10px;
+  background: #E3E3E3;
+  margin: 0 10px;
+}
+
+/* line 204, brandworx/styles/_general.scss */
+.dot-sep {
+  position: relative;
+}
+/* line 207, brandworx/styles/_general.scss */
+.dot-sep::before {
+  content: '\00B7';
+  font-size: 25px;
+  color: #444444;
+  margin: 0 10px;
+}
+
+/* line 215, brandworx/styles/_general.scss */
+.show {
+  display: block !important;
+}
+
+/* line 219, brandworx/styles/_general.scss */
+.social-icon {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  margin: 0;
+}
+
+/* line 224, brandworx/styles/_general.scss */
+.block-full {
+  width: 100%;
+}
+
+/* line 228, brandworx/styles/_general.scss */
+.block-half {
+  width: 49%;
+}
+
+/* line 232, brandworx/styles/_general.scss */
+.block-fourth {
+  width: 23%;
+}
+
+/* line 236, brandworx/styles/_general.scss */
+.block-third {
+  width: 32%;
+}
+
+/* line 240, brandworx/styles/_general.scss */
+.block-fifth {
+  width: 19%;
+}
+
+/* line 260, brandworx/styles/_general.scss */
+.pad-section {
+  padding: 30px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 286, brandworx/styles/_general.scss */
+#content {
+  position: relative;
+  padding: 0;
+}
+/* line 290, brandworx/styles/_general.scss */
+#content .site-branding {
+  padding: 65px 0;
+}
+/* line 293, brandworx/styles/_general.scss */
+#content .site-branding #logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 380px;
+}
+
+/* line 301, brandworx/styles/_general.scss */
+.page-title {
+  position: relative;
+  text-align: center;
+}
+/* line 305, brandworx/styles/_general.scss */
+.page-title.has-bar:after {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  width: 80px;
+  height: 2px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+/* line 318, brandworx/styles/_general.scss */
+.flex-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  -webkit-flex-wrap: wrap !important;
+}
+
+/* line 322, brandworx/styles/_general.scss */
+.flex-row {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+}
+
+/* line 326, brandworx/styles/_general.scss */
+.flex-row-rev {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  -webkit-flex-direction: row-reverse !important;
+}
+
+/* line 330, brandworx/styles/_general.scss */
+.flex-col {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+}
+
+/* line 334, brandworx/styles/_general.scss */
+.flex-col-rev {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  -webkit-flex-direction: column-reverse !important;
+}
+
+/* line 338, brandworx/styles/_general.scss */
+.align-start {
+  display: -webkit-flex !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  -webkit-align-items: flex-start !important;
+}
+
+/* line 342, brandworx/styles/_general.scss */
+.align-center {
+  display: -webkit-flex !important;
+  display: flex !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+}
+
+/* line 346, brandworx/styles/_general.scss */
+.align-end {
+  display: -webkit-flex !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  -webkit-align-items: flex-end !important;
+}
+
+/* line 350, brandworx/styles/_general.scss */
+.justify-start {
+  display: -webkit-flex !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+
+/* line 354, brandworx/styles/_general.scss */
+.justify-end {
+  display: -webkit-flex !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  -webkit-justify-content: flex-end !important;
+}
+
+/* line 358, brandworx/styles/_general.scss */
+.justify-around {
+  display: -webkit-flex !important;
+  display: flex !important;
+  justify-content: space-around !important;
+  -webkit-justify-content: space-around !important;
+}
+
+/* line 362, brandworx/styles/_general.scss */
+.justify-center {
+  display: -webkit-flex !important;
+  display: flex !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+
+/* line 366, brandworx/styles/_general.scss */
+.justify-between {
+  display: -webkit-flex !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+
+/* line 370, brandworx/styles/_general.scss */
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+/* line 380, brandworx/styles/_general.scss */
+a .icon {
+  -webkit-transition: unset;
+  -moz-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+
+/* line 387, brandworx/styles/_general.scss */
+.alm-btn-wrap {
+  padding: 10px !important;
+  margin: 50px 0 0 !important;
+  border-top: 1px solid #E3E3E3 !important;
+  border-bottom: 1px solid #E3E3E3 !important;
+}
+/* line 393, brandworx/styles/_general.scss */
+.alm-btn-wrap .alm-load-more-btn {
+  height: auto !important;
+  background: unset !important;
+  color: black !important;
+  font-size: 24px !important;
+  text-transform: capitalize !important;
+  letter-spacing: 3px !important;
+  font-weight: 100 !important;
+  margin: 0px !important;
+  font-family: "Cormorant Garamond", serif !important;
+}
+/* line 410, brandworx/styles/_general.scss */
+.alm-btn-wrap .alm-load-more-btn:hover span {
+  margin-left: 10px;
+}
+
+/* line 417, brandworx/styles/_general.scss */
+.slick-slider {
+  position: relative;
+}
+/* line 420, brandworx/styles/_general.scss */
+.slick-slider .slick-arrow {
+  position: absolute;
+  top: 35%;
+  font-size: 20px;
+  color: #444444;
+}
+/* line 426, brandworx/styles/_general.scss */
+.slick-slider .slick-arrow.slick-prev {
+  left: -1%;
+}
+/* line 430, brandworx/styles/_general.scss */
+.slick-slider .slick-arrow.slick-next {
+  right: -1%;
+}
+/* line 434, brandworx/styles/_general.scss */
+.slick-slider .slick-arrow:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+/* line 440, brandworx/styles/_general.scss */
+.slick-slider .slick-dots {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  padding: 0;
+  margin: 20px 0 40px;
+  list-style: none;
+}
+/* line 449, brandworx/styles/_general.scss */
+.slick-slider .slick-dots li.slick-active button {
+  padding: 0;
+  background: #336699 !important;
+}
+/* line 455, brandworx/styles/_general.scss */
+.slick-slider .slick-dots li button {
+  position: relative;
+  color: transparent !important;
+  width: 12px;
+  height: 12px;
+  background: #FAFAFA !important;
+  border: none;
+  border-radius: 100% !important;
+  margin: 0 7px;
+  padding: 0;
+}
+/* line 466, brandworx/styles/_general.scss */
+.slick-slider .slick-dots li button:hover {
+  background: #336699 !important;
+}
+/* line 469, brandworx/styles/_general.scss */
+.slick-slider .slick-dots li button:hover::after {
+  background: unset !important;
+}
+/* line 474, brandworx/styles/_general.scss */
+.slick-slider .slick-dots li button::after {
+  background: unset !important;
+}
+/* line 478, brandworx/styles/_general.scss */
+.slick-slider .slick-dots li button::focus {
+  outline: none !important;
+}
+/* line 486, brandworx/styles/_general.scss */
+.slick-slider .slick-slide:focus {
+  outline: none !important;
+}
+
+/* line 497, brandworx/styles/_general.scss */
+.nf-form-wrap .nf-form-fields-required {
+  display: none;
+}
+
+/* line 502, brandworx/styles/_general.scss */
+.numbered-pagination {
+  position: relative;
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  font-size: 12px;
+  padding: 50px 20px;
+}
+/* line 508, brandworx/styles/_general.scss */
+.numbered-pagination > * {
+  margin: 0 6px;
+}
+/* line 512, brandworx/styles/_general.scss */
+.numbered-pagination > .page-numbers {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+}
+/* line 518, brandworx/styles/_general.scss */
+.numbered-pagination > .page-numbers.current {
+  background: #FAFAFA;
+  border-radius: 100%;
+}
+
+/* line 525, brandworx/styles/_general.scss */
+blockquote {
+  background: #FAFAFA;
+  box-shadow: 0px 5px 7px 2px rgba(68, 68, 68, 0.1);
+  margin: 0 0 20px;
+  padding: 20px;
+}
+/* line 531, brandworx/styles/_general.scss */
+blockquote > p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* line 1, brandworx/styles/_header.scss */
+#waypoint {
+  position: relative;
+  top: 10px;
+}
+
+/* line 6, brandworx/styles/_header.scss */
+#masthead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background-color: #FAFAFA;
+  z-index: 1000;
+}
+/* line 23, brandworx/styles/_header.scss */
+#masthead.lock_nav {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000;
+}
+/* line 33, brandworx/styles/_header.scss */
+#masthead.lock_nav .site-navigation-wrap .menu-container {
+  width: 100%;
+}
+/* line 37, brandworx/styles/_header.scss */
+#masthead.lock_nav .site-navigation-wrap #primary-menu {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+/* line 42, brandworx/styles/_header.scss */
+#masthead.lock_nav .site-navigation-wrap #primary-menu li {
+  padding: 20px 0;
+}
+/* line 53, brandworx/styles/_header.scss */
+#masthead .site-navigation-wrap {
+  position: relative;
+}
+/* line 56, brandworx/styles/_header.scss */
+#masthead .site-navigation-wrap #primary_menu {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  -webkit-flex-wrap: wrap !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 61, brandworx/styles/_header.scss */
+#masthead .site-navigation-wrap .main-navigation {
+  width: unset;
+}
+/* line 65, brandworx/styles/_header.scss */
+#masthead .site-navigation-wrap .side-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+}
+/* line 75, brandworx/styles/_header.scss */
+#masthead .site-navigation-wrap .side-menu .menu-suscribe {
+  margin-left: 10px;
+}
+/* line 86, brandworx/styles/_header.scss */
+#masthead .header-block {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  float: none;
+  flex: 1;
+}
+/* line 91, brandworx/styles/_header.scss */
+#masthead .header-block .menu-container {
+  width: 100%;
+}
+/* line 96, brandworx/styles/_header.scss */
+#masthead .header-block.header-left .header-block-inner {
+  margin-right: auto;
+}
+/* line 100, brandworx/styles/_header.scss */
+#masthead .header-block.header-middle {
+  flex: 4;
+}
+/* line 104, brandworx/styles/_header.scss */
+#masthead .header-block.header-right .header-block-inner {
+  margin-left: auto;
+}
+/* line 107, brandworx/styles/_header.scss */
+#masthead .header-block.header-right .header-block-inner .icon.search-modal-link {
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  /* line 103, brandworx/styles/_header.scss */
+  #masthead .header-block.header-right {
+    display: none;
+  }
+}
+/* line 118, brandworx/styles/_header.scss */
+#masthead #primary-menu {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+/* line 123, brandworx/styles/_header.scss */
+#masthead #primary-menu li {
+  padding: 65px 0;
+}
+/* line 129, brandworx/styles/_header.scss */
+#masthead .menu-mobile-container {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  /* line 129, brandworx/styles/_header.scss */
+  #masthead .menu-mobile-container {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    background: white;
+  }
+  /* line 143, brandworx/styles/_header.scss */
+  #masthead .menu-mobile-container .menu li {
+    display: block;
+    float: none;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 155, brandworx/styles/_header.scss */
+  #masthead #mobile_nav_wrap {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    justify-content: flex-start !important;
+    -webkit-justify-content: flex-start !important;
+    width: 100%;
+  }
+  /* line 160, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: space-between !important;
+    -webkit-justify-content: space-between !important;
+    height: 45px;
+  }
+  /* line 164, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap .header-left {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: flex-end !important;
+    -webkit-justify-content: flex-end !important;
+    margin-right: 20px;
+  }
+  /* line 168, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap .header-left .header-block-inner {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: flex-end !important;
+    -webkit-justify-content: flex-end !important;
+    margin-right: 0;
+  }
+  /* line 174, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap #site-navigation {
+    display: none !important;
+  }
+  /* line 177, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap #site-navigation .menu-container {
+    display: none;
+  }
+  /* line 182, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap #site-navigation.toggled .menu-container {
+    display: block;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: white;
+  }
+  /* line 192, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap #site-navigation.toggled .menu-container #primary-menu {
+    display: block;
+  }
+  /* line 195, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap #site-navigation.toggled .menu-container #primary-menu li {
+    padding: 8px 10px;
+  }
+  /* line 198, brandworx/styles/_header.scss */
+  #masthead .site-navigation-wrap #site-navigation.toggled .menu-container #primary-menu li .posts-drop {
+    display: none;
+  }
+}
+
+/* line 212, brandworx/styles/_header.scss */
+body.home #masthead {
+  background: rgba(250, 250, 250, 0.8);
+}
+/* line 215, brandworx/styles/_header.scss */
+body.home #masthead.lock_nav {
+  background: #FAFAFA;
+}
+
+/* line 222, brandworx/styles/_header.scss */
+#logo_wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+  padding: 0;
+  z-index: 1;
+}
+/* line 228, brandworx/styles/_header.scss */
+#logo_wrap img {
+  max-height: 50px;
+  width: auto;
+}
+@media screen and (max-width: 600px) {
+  /* line 222, brandworx/styles/_header.scss */
+  #logo_wrap {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 243, brandworx/styles/_header.scss */
+  body.customize-support #site-navigation.toggled .menu-container {
+    top: 90px !important;
+  }
+  /* line 252, brandworx/styles/_header.scss */
+  body.customize-support.lock_nav #site-navigation.toggled .menu-container {
+    top: 45px !important;
+  }
+}
+/* line 262, brandworx/styles/_header.scss */
+.test-container {
+  display: flex;
+}
+
+/* line 265, brandworx/styles/_header.scss */
+.box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 271, brandworx/styles/_header.scss */
+.box:first-child > span {
+  margin-right: auto;
+}
+
+/* line 273, brandworx/styles/_header.scss */
+.box:last-child > span {
+  margin-left: auto;
+}
+
+/* line 5, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .stacked-images {
+  width: 49%;
+  height: 665px;
+}
+/* line 9, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .stacked-images .stacked-half {
+  max-width: 325px;
+  margin-right: -15%;
+}
+/* line 15, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content {
+  width: 42%;
+  padding: 30px;
+}
+/* line 19, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content .loop-main-meta {
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+/* line 24, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content .loop-main-meta a.category-name {
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+/* line 29, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content .loop-main-meta .post-date {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+/* line 35, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content .exceprt {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+/* line 41, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content a.view-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+/* line 49, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content a.view-post span {
+  padding-right: 10px;
+}
+/* line 53, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content a.view-post .icon {
+  width: 10px;
+  fill: #7a7a7a;
+}
+/* line 59, brandworx/styles/_front-page.scss */
+.loop-main .loop-main-inner .loop-main-post .loop-main-content a.view-post:hover .icon {
+  margin-left: 5px;
+}
+@media screen and (max-width: 960px) {
+  /* line 73, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post .loop-main-content {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 86, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post .loop-main-content {
+    padding: 30px;
+    width: 44%;
+  }
+  /* line 91, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post .stacked-images {
+    width: 55%;
+    height: 465px;
+  }
+  /* line 95, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post .stacked-images .stacked-half {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 107, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post {
+    flex-direction: column;
+  }
+  /* line 110, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post .loop-main-content {
+    padding: 20px;
+    width: 100%;
+  }
+  /* line 115, brandworx/styles/_front-page.scss */
+  .loop-main .loop-main-inner .loop-main-post .stacked-images {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+/* line 126, brandworx/styles/_front-page.scss */
+#featured_posts {
+  background: #444444;
+  color: white;
+}
+/* line 130, brandworx/styles/_front-page.scss */
+#featured_posts a {
+  color: white !important;
+}
+
+/* line 135, brandworx/styles/_front-page.scss */
+#more_posts_home {
+  border-top: 1px solid #D9D9D9;
+  padding-top: 50px;
+}
+
+/* line 1, brandworx/styles/_archive.scss */
+.archive-items, #archive_page .alm-reveal {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  padding: 0 60px;
+}
+
+/* line 6, brandworx/styles/_archive.scss */
+.archive-item {
+  position: relative;
+  width: 100%;
+  padding: 15px 0;
+}
+/* line 12, brandworx/styles/_archive.scss */
+.archive-item .archive-item-thumb {
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  /* line 12, brandworx/styles/_archive.scss */
+  .archive-item .archive-item-thumb {
+    width: 100%;
+  }
+}
+/* line 20, brandworx/styles/_archive.scss */
+.archive-item .archive-item-body {
+  width: 52%;
+}
+/* line 23, brandworx/styles/_archive.scss */
+.archive-item .archive-item-body .archive-item-title {
+  margin-bottom: 10px;
+}
+/* line 27, brandworx/styles/_archive.scss */
+.archive-item .archive-item-body .archive-item-excerpt {
+  text-align: justify;
+}
+@media screen and (max-width: 768px) {
+  /* line 20, brandworx/styles/_archive.scss */
+  .archive-item .archive-item-body {
+    width: 100%;
+  }
+}
+/* line 36, brandworx/styles/_archive.scss */
+.archive-item:nth-child(2n) {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  -webkit-flex-direction: row-reverse !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+@media screen and (max-width: 768px) {
+  /* line 36, brandworx/styles/_archive.scss */
+  .archive-item:nth-child(2n) {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+}
+/* line 44, brandworx/styles/_archive.scss */
+.archive-item:nth-child(2n+1) {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+@media screen and (max-width: 768px) {
+  /* line 44, brandworx/styles/_archive.scss */
+  .archive-item:nth-child(2n+1) {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+}
+
+/* line 1, brandworx/styles/_single-post.scss */
+article.post,
+article.snapshot {
+  position: relative;
+  padding: 50px 0 0;
+}
+/* line 6, brandworx/styles/_single-post.scss */
+article.post .entry-content,
+article.snapshot .entry-content {
+  width: 100%;
+  padding: 0 60px;
+}
+/* line 10, brandworx/styles/_single-post.scss */
+article.post .entry-content ul, article.post .entry-content li,
+article.snapshot .entry-content ul,
+article.snapshot .entry-content li {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 31px;
+  letter-spacing: 0.5px;
+}
+/* line 17, brandworx/styles/_single-post.scss */
+article.post .entry-content .rs-code,
+article.snapshot .entry-content .rs-code {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* line 27, brandworx/styles/_single-post.scss */
+.entry-header .entry-header-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  -webkit-flex-wrap: wrap !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+
+/* line 32, brandworx/styles/_single-post.scss */
+.entry-footer {
+  padding: 10px;
+  margin: 50px 0 0;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+/* line 46, brandworx/styles/_single-post.scss */
+.entry-footer .entry-footer-actions > * {
+  margin: 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+/* line 53, brandworx/styles/_single-post.scss */
+.entry-footer .entry-footer-actions span {
+  margin-left: 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+  /* line 32, brandworx/styles/_single-post.scss */
+  .entry-footer {
+    padding: 15px 0px;
+    margin: 20px 0;
+  }
+  /* line 66, brandworx/styles/_single-post.scss */
+  .entry-footer .entry-footer-actions > * {
+    margin: 0px;
+  }
+}
+
+/*--------------------------------------------------------------
+# COMMENTS
+--------------------------------------------------------------*/
+/* line 1, brandworx/styles/_comments.scss */
+#comments {
+  display: none;
+  max-width: 80%;
+  margin: 50px auto 0;
+}
+/* line 6, brandworx/styles/_comments.scss */
+#comments .comment-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* line 14, brandworx/styles/_comments.scss */
+#comments .container {
+  max-width: 685px;
+}
+/* line 18, brandworx/styles/_comments.scss */
+#comments .comments-title {
+  display: none;
+  text-align: center;
+}
+/* line 24, brandworx/styles/_comments.scss */
+#comments .respond textarea {
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+}
+/* line 32, brandworx/styles/_comments.scss */
+#comments .comment-input-half {
+  width: 49%;
+}
+/* line 36, brandworx/styles/_comments.scss */
+#comments input[type="text"], #comments input[type="email"], #comments input[type="url"], #comments input[type="password"], #comments input[type="search"], #comments input[type="number"], #comments input[type="tel"], #comments input[type="range"], #comments input[type="date"], #comments input[type="month"], #comments input[type="week"], #comments input[type="time"], #comments input[type="datetime"], #comments input[type="datetime-local"], #comments input[type="color"], #comments textarea {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 7px 10px;
+  border-radius: 0;
+  margin-bottom: 5px;
+  width: 100%;
+}
+/* line 47, brandworx/styles/_comments.scss */
+#comments input#submit {
+  width: 100%;
+  background: #aba9a2 !important;
+  color: white !important;
+  border: none;
+}
+/* line 54, brandworx/styles/_comments.scss */
+#comments div#respond {
+  margin-bottom: 50px;
+}
+/* line 58, brandworx/styles/_comments.scss */
+#comments .comment-list {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/* line 65, brandworx/styles/_comments.scss */
+#comments .comment-list .comment .comment-meta {
+  display: -webkit-flex;
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+/* line 73, brandworx/styles/_comments.scss */
+#comments .comment-list .comment .comment-meta .avatar, #comments .comment-list .comment .comment-meta .says {
+  display: none;
+}
+/* line 77, brandworx/styles/_comments.scss */
+#comments .comment-list .comment .comment-meta .comment-metadata {
+  display: none;
+}
+/* line 82, brandworx/styles/_comments.scss */
+#comments .comment-list .comment .children {
+  margin: 40px 0px;
+}
+/* line 86, brandworx/styles/_comments.scss */
+#comments .comment-list .comment .reply {
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 15px;
+}
+
+/* line 1, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper {
+  padding: 50px;
+}
+/* line 4, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+}
+/* line 8, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-image {
+  width: 50%;
+}
+/* line 12, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-body {
+  position: relative;
+  width: 50%;
+  padding: 20px 50px;
+  z-index: 1;
+}
+/* line 18, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-body h5.snapshot-label {
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 50px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+/* line 26, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-body .snapshot-products {
+  width: 100%;
+}
+/* line 30, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-body .snapshot-products .product .product-image {
+  max-height: 150px;
+  width: auto;
+}
+/* line 35, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-body .snapshot-products .product .product-brand {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+}
+/* line 42, brandworx/styles/_single-snapshot.scss */
+.snapshot-post-wrapper .snapshot-post-inner .snapshot-body .snapshot-products .product .product-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 56, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-body {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 63, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner {
+    flex-direction: column !important;
+  }
+  /* line 66, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  /* line 71, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-body {
+    padding: 30px;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 1, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper {
+    padding: 50px 20px;
+  }
+  /* line 82, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner {
+    flex-direction: column !important;
+  }
+  /* line 85, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  /* line 90, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-body {
+    padding: 30px;
+    width: 100%;
+    margin-left: 0;
+  }
+  /* line 95, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-body h2.snapshot-title {
+    line-height: 33px;
+    font-size: 29px;
+    margin-bottom: 15px;
+  }
+  /* line 103, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-body .snapshot-products .snapshot-product .snapshot-product-wrapper {
+    text-align: center;
+  }
+  /* line 107, brandworx/styles/_single-snapshot.scss */
+  .snapshot-post-wrapper .snapshot-post-inner .snapshot-body .snapshot-products .snapshot-product .snapshot-product-wrapper .snapshot-product-brand h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+/* line 1, brandworx/styles/_page.scss */
+.page-space {
+  margin-top: 87px;
+}
+
+/* line 5, brandworx/styles/_page.scss */
+.page-banner {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  max-height: 650px;
+  min-height: 300px;
+}
+/* line 12, brandworx/styles/_page.scss */
+.page-banner.text-bottom {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: flex-end !important;
+  -webkit-align-items: flex-end !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+/* line 16, brandworx/styles/_page.scss */
+.page-banner.text-center {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+@media screen and (max-width: 600px) {
+  /* line 16, brandworx/styles/_page.scss */
+  .page-banner.text-center {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    align-items: flex-end !important;
+    -webkit-align-items: flex-end !important;
+    justify-content: flex-start !important;
+    -webkit-justify-content: flex-start !important;
+  }
+}
+/* line 25, brandworx/styles/_page.scss */
+.page-banner.overlay::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(106.33deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 90%);
+  z-index: 0;
+}
+/* line 38, brandworx/styles/_page.scss */
+.page-banner > * {
+  z-index: 1;
+}
+/* line 46, brandworx/styles/_page.scss */
+.page-banner .page-quote {
+  position: relative;
+  font-size: 36px;
+  max-width: 500px;
+  z-index: 1;
+}
+/* line 52, brandworx/styles/_page.scss */
+.page-banner .page-quote .quote-text {
+  margin-bottom: 20px;
+}
+/* line 55, brandworx/styles/_page.scss */
+.page-banner .page-quote .quote-text p {
+  font-size: 36px;
+  text-align: left;
+  line-height: 1.25em;
+}
+@media screen and (max-width: 768px) {
+  /* line 55, brandworx/styles/_page.scss */
+  .page-banner .page-quote .quote-text p {
+    font-size: 22px;
+  }
+}
+/* line 74, brandworx/styles/_page.scss */
+.page-banner .page-quote .quote-by {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  /* line 46, brandworx/styles/_page.scss */
+  .page-banner .page-quote {
+    font-size: 22px;
+  }
+}
+
+/* line 84, brandworx/styles/_page.scss */
+.entry-content {
+  padding: 0 60px;
+}
+
+/* line 3, brandworx/styles/_page-about.scss */
+#about_page .about-outer {
+  padding: 50px;
+}
+/* line 9, brandworx/styles/_page-about.scss */
+#about_page .about-inner .about-images {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: flex-end !important;
+  -webkit-align-items: flex-end !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 12, brandworx/styles/_page-about.scss */
+#about_page .about-inner .about-images .about-image-main {
+  width: 89%;
+}
+/* line 16, brandworx/styles/_page-about.scss */
+#about_page .about-inner .about-images .about-image-side {
+  position: relative;
+  width: 48%;
+  margin-left: -37%;
+  margin-bottom: -30px;
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+}
+/* line 27, brandworx/styles/_page-about.scss */
+#about_page .about-inner .about-body .page-title {
+  text-align: left;
+}
+/* line 35, brandworx/styles/_page-about.scss */
+#about_page #about_main .stacked-images {
+  width: 49%;
+  height: 665px;
+}
+/* line 39, brandworx/styles/_page-about.scss */
+#about_page #about_main .stacked-images .stacked-half {
+  max-width: 325px;
+  margin-right: -15%;
+}
+/* line 45, brandworx/styles/_page-about.scss */
+#about_page #about_main .loop-main-content {
+  width: 42%;
+  padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  /* line 54, brandworx/styles/_page-about.scss */
+  #about_page #about_main {
+    flex-direction: column;
+  }
+  /* line 57, brandworx/styles/_page-about.scss */
+  #about_page #about_main .stacked-images {
+    width: 75%;
+    height: 565px;
+  }
+  /* line 61, brandworx/styles/_page-about.scss */
+  #about_page #about_main .stacked-images .stacked-half {
+    display: none;
+  }
+  /* line 68, brandworx/styles/_page-about.scss */
+  #about_page #about_main .loop-main-content {
+    width: 80%;
+    padding: 30px;
+  }
+}
+
+/* line 1, brandworx/styles/_page-contact.scss */
+#contact_page {
+  padding: 50px;
+}
+/* line 4, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  width: 100%;
+}
+/* line 8, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-image {
+  width: 56%;
+}
+/* line 12, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body {
+  position: relative;
+  width: 54%;
+  margin-left: -10%;
+  background: #ffffff;
+  padding: 30px;
+}
+/* line 19, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body .page-title {
+  text-align: left;
+}
+/* line 23, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body p {
+  margin: 0;
+}
+/* line 27, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body input {
+  border: 1px solid black !important;
+  border-radius: 0 !important;
+}
+/* line 31, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body textarea {
+  border: 1px solid black !important;
+  border-radius: 0 !important;
+}
+/* line 35, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body .nf-field-container {
+  margin-bottom: 20px;
+}
+/* line 38, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body nf-field {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  display: block;
+}
+/* line 42, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body nf-field .nf-field-container {
+  width: 100%;
+}
+/* line 45, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body nf-field .nf-field-container.submit-container {
+  width: auto;
+}
+/* line 50, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body nf-field:last-child {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-end !important;
+  -webkit-justify-content: flex-end !important;
+}
+/* line 61, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body nf-field input[value="Submit"][type="button"] {
+  background: unset;
+  border: none !important;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+/* line 73, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body .nf-field-element textarea {
+  height: 106px;
+}
+/* line 78, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body .label-above .nf-field-label {
+  margin: 0;
+}
+/* line 83, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body .nf-field-label label {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+/* line 92, brandworx/styles/_page-contact.scss */
+#contact_page .contact-wrapper .contact-body .nf-form-fields-required {
+  display: none !important;
+}
+
+/* line 3, brandworx/styles/_page-influence.scss */
+.home-link .icon {
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+}
+
+/* line 12, brandworx/styles/_page-influence.scss */
+#influence_slides .influence-slide {
+  width: 100%;
+  height: 550px;
+}
+
+/* line 19, brandworx/styles/_page-influence.scss */
+#cta_blocks {
+  padding: 50px;
+}
+/* line 22, brandworx/styles/_page-influence.scss */
+#cta_blocks .cta-block {
+  position: relative;
+  background: #E4C7D5;
+  color: white;
+  width: 32%;
+  margin-bottom: 2%;
+  padding: 30px;
+}
+/* line 30, brandworx/styles/_page-influence.scss */
+#cta_blocks .cta-block .cta-title-wrap {
+  position: relative;
+}
+/* line 33, brandworx/styles/_page-influence.scss */
+#cta_blocks .cta-block .cta-title-wrap .cta-block-index {
+  position: relative;
+  font-size: 105px;
+  opacity: 0.4;
+  z-index: 0;
+}
+/* line 40, brandworx/styles/_page-influence.scss */
+#cta_blocks .cta-block .cta-title-wrap .cta-title {
+  position: absolute;
+  font-size: 18px;
+  z-index: 1;
+}
+/* line 47, brandworx/styles/_page-influence.scss */
+#cta_blocks .cta-block .cta-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+}
+/* line 60, brandworx/styles/_page-influence.scss */
+#cta_blocks .cta-block:hover .cta-wrap {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 71, brandworx/styles/_page-influence.scss */
+#influence_testimonials .testimonials-container {
+  max-width: 950px;
+  width: 85%;
+  margin: 0 auto;
+}
+/* line 77, brandworx/styles/_page-influence.scss */
+#influence_testimonials .testimonial {
+  margin-bottom: 50px;
+}
+/* line 80, brandworx/styles/_page-influence.scss */
+#influence_testimonials .testimonial .testimonial-photo {
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 100%;
+}
+/* line 86, brandworx/styles/_page-influence.scss */
+#influence_testimonials .testimonial .testimonial-content {
+  width: 80%;
+}
+
+/* line 1, brandworx/styles/_page-shop.scss */
+#shop_page {
+  padding: 50px 0;
+}
+/* line 4, brandworx/styles/_page-shop.scss */
+#shop_page .shop-search {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  padding: 50px 50px 20px;
+}
+/* line 8, brandworx/styles/_page-shop.scss */
+#shop_page .shop-search .shop-search-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* line 13, brandworx/styles/_page-shop.scss */
+#shop_page .shop-search .shop-search-form .search-fields {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 16, brandworx/styles/_page-shop.scss */
+#shop_page .shop-search .shop-search-form .search-fields input {
+  flex: 1;
+}
+/* line 19, brandworx/styles/_page-shop.scss */
+#shop_page .shop-search .shop-search-form .search-fields input[type="submit"] {
+  flex: 0;
+}
+/* line 28, brandworx/styles/_page-shop.scss */
+#shop_page section .container-xl {
+  padding: 50px;
+  margin: 50px 0;
+  border-top: 1px solid #E3E3E3;
+}
+/* line 35, brandworx/styles/_page-shop.scss */
+#shop_page .shop-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  text-align: center;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+/* line 43, brandworx/styles/_page-shop.scss */
+#shop_page .shop-inner > * {
+  width: 100%;
+}
+/* line 48, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+/* line 51, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav #shop_menu {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+/* line 59, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav #shop_menu ul {
+  padding: 5px 0px;
+}
+/* line 63, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav #shop_menu li {
+  text-align: left;
+  margin: 5px 10px;
+}
+/* line 67, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav #shop_menu li.current-menu-item {
+  border-bottom: 2px solid #336699;
+}
+/* line 75, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav #shop_menu li .sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+/* line 83, brandworx/styles/_page-shop.scss */
+#shop_page .shop-nav .shop-nav-title {
+  font-size: 22px;
+  font-family: "Cormorant Garamond", serif;
+  color: black;
+  padding-bottom: 12px;
+}
+/* line 92, brandworx/styles/_page-shop.scss */
+#shop_page.index .shop-nav {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+/* line 99, brandworx/styles/_page-shop.scss */
+#shop_page .products-grid-wrapper .product-grid-item {
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+}
+/* line 106, brandworx/styles/_page-shop.scss */
+#shop_page .products-grid-wrapper .product-grid-item .flex-col .product-thumb {
+  width: 100%;
+  height: 285px;
+  position: relative;
+}
+/* line 111, brandworx/styles/_page-shop.scss */
+#shop_page .products-grid-wrapper .product-grid-item .flex-col .product-thumb .shop-btn {
+  opacity: 0;
+  position: absolute;
+}
+/* line 119, brandworx/styles/_page-shop.scss */
+#shop_page .products-grid-wrapper .product-grid-item .flex-col .product-thumb:hover .shop-btn {
+  opacity: 1;
+}
+/* line 125, brandworx/styles/_page-shop.scss */
+#shop_page .products-grid-wrapper .product-grid-item .flex-col .product-brand {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  padding: 10px 8px 0;
+}
+/* line 134, brandworx/styles/_page-shop.scss */
+#shop_page .products-grid-wrapper .product-grid-item .flex-col .product-title {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 0px 8px;
+}
+
+/* line 148, brandworx/styles/_page-shop.scss */
+.product .product-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 151, brandworx/styles/_page-shop.scss */
+.product .product-wrap .product-image-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+/* line 158, brandworx/styles/_page-shop.scss */
+.product .product-wrap .product-image-wrap .product-image {
+  max-height: 200px;
+  width: auto;
+}
+/* line 163, brandworx/styles/_page-shop.scss */
+.product .product-wrap .product-image-wrap .shop-btn {
+  position: absolute;
+}
+/* line 168, brandworx/styles/_page-shop.scss */
+.product .product-wrap .product-link-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 171, brandworx/styles/_page-shop.scss */
+.product .product-wrap .product-link-wrap .product-link {
+  text-transform: uppercase;
+}
+
+/* line 1, brandworx/styles/_footer.scss */
+#footer_menu_container {
+  background: #FAFAFA;
+  border-top: 1px solid #000066;
+  padding: 15px 30px;
+}
+/* line 6, brandworx/styles/_footer.scss */
+#footer_menu_container #footer_menu {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+
+/* line 12, brandworx/styles/_footer.scss */
+.site-disclaimer {
+  text-align: center;
+  padding: 10px;
+  background: #336699;
+  color: #ffffff;
+}
+/* line 18, brandworx/styles/_footer.scss */
+.site-disclaimer p {
+  text-align: center;
+}
+/* line 25, brandworx/styles/_footer.scss */
+.site-disclaimer a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* line 32, brandworx/styles/_footer.scss */
+#colophon {
+  position: relative;
+  padding: 13px 30px;
+  background: #FFCC33;
+  color: #444444;
+}
+/* line 38, brandworx/styles/_footer.scss */
+#colophon #footer_menu_container {
+  margin: 0 10px;
+}
+/* line 42, brandworx/styles/_footer.scss */
+#colophon #footer_menu {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  -webkit-flex-wrap: wrap !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 51, brandworx/styles/_footer.scss */
+#colophon .site-info {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+/* line 54, brandworx/styles/_footer.scss */
+#colophon .site-info .site-copy {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+/* line 57, brandworx/styles/_footer.scss */
+#colophon .site-info .site-copy .icon {
+  width: 94px;
+  height: 15px;
+  margin-right: 20px;
+}
+/* line 65, brandworx/styles/_footer.scss */
+#colophon .site-info .site-built span {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 68, brandworx/styles/_footer.scss */
+#colophon .site-info .site-built span a {
+  margin-left: 5px;
+}
+/* line 73, brandworx/styles/_footer.scss */
+#colophon .site-info .site-built img {
+  max-height: 25px;
+  margin-top: 1px;
+  margin-left: 4px;
+}
+@media screen and (max-width: 768px) {
+  /* line 51, brandworx/styles/_footer.scss */
+  #colophon .site-info {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+    text-align: center !important;
+  }
+  /* line 84, brandworx/styles/_footer.scss */
+  #colophon .site-info .site-copy {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+  /* line 87, brandworx/styles/_footer.scss */
+  #colophon .site-info .site-built {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: row !important;
+    -webkit-flex-direction: row !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+}
+
+/* line 1, brandworx/modules/block_custom_search/_block_custom_search.scss */
+.custom-search-form {
+  width: 100%;
+}
+/* line 6, brandworx/modules/block_custom_search/_block_custom_search.scss */
+.custom-search-form .search-with-icon .search-field {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: white !important;
+  padding: 5px 5px 5px 30px;
+  font-style: italic;
+}
+
+/* line 1, brandworx/modules/block_flex_row/_block_flex_row.scss */
+.flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 6, brandworx/modules/block_flex_row/_block_flex_row.scss */
+.flex_row .flex_row_block, .flex_row > * {
+  width: 49%;
+}
+/* line 11, brandworx/modules/block_flex_row/_block_flex_row.scss */
+.flex_row img {
+  display: block;
+  max-width: 49%;
+  margin: 2% 0;
+}
+/* line 16, brandworx/modules/block_flex_row/_block_flex_row.scss */
+.flex_row img:nth-of-type(2n) {
+  margin-left: 1%;
+}
+/* line 20, brandworx/modules/block_flex_row/_block_flex_row.scss */
+.flex_row img:nth-of-type(2n+1) {
+  margin-right: 1%;
+}
+@media screen and (max-width: 768px) {
+  /* line 1, brandworx/modules/block_flex_row/_block_flex_row.scss */
+  .flex_row {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  /* line 35, brandworx/modules/block_flex_row/_block_flex_row.scss */
+  .flex_row > * {
+    width: 100%;
+  }
+  /* line 39, brandworx/modules/block_flex_row/_block_flex_row.scss */
+  .flex_row img {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+}
+
+/* line 1, brandworx/modules/block_popups/_block_popups.scss */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.75);
+  z-index: 150;
+  display: none;
+  cursor: pointer;
+}
+/* line 12, brandworx/modules/block_popups/_block_popups.scss */
+.modal a {
+  color: white;
+}
+/* line 16, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box {
+  background: #FAFAFA;
+  color: #444444;
+  padding: 0;
+  position: relative;
+  width: 90%;
+  max-width: 500px !important;
+  top: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  cursor: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 34, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box #popup-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  max-width: 16px;
+  z-index: 50;
+}
+/* line 41, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box #popup-close .icon {
+  width: 25px;
+  height: 25px;
+  fill: black;
+}
+/* line 48, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+/* line 56, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .footer-subscribe {
+  padding: 50px;
+}
+/* line 59, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .footer-subscribe .footer-social {
+  padding: 0px 0px 30px;
+}
+/* line 63, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .footer-subscribe .subscribe-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 70px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/* line 71, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .footer-subscribe .subscribe-text {
+  font-family: "Montserrat", sans-serif;
+}
+/* line 76, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .popup-image {
+  width: 100%;
+}
+/* line 80, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .popup-text {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 84, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .popup-text h3 {
+  font-weight: normal;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* line 93, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .popup-text p {
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 25px;
+  margin-bottom: 24px;
+}
+/* line 102, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner .popup-text #mc_embed_signup_scroll p {
+  margin-bottom: -20px;
+}
+/* line 108, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: black;
+  font-size: 28px;
+  padding: 0px 40px;
+  letter-spacing: 1px;
+}
+/* line 119, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner nf-field:nth-child(1) {
+  float: left;
+  width: 48%;
+}
+/* line 124, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner nf-field:nth-child(2) {
+  float: right;
+  width: 48%;
+}
+/* line 131, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner nf-field:nth-child(3) .nf-field-container {
+  margin-bottom: 0;
+}
+/* line 137, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner input {
+  border: none;
+  padding: 8px;
+  letter-spacing: 2px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  line-height: 13px;
+}
+/* line 145, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner input[type="button"] {
+  padding: 7px 5%;
+  margin-bottom: 30px;
+}
+/* line 152, brandworx/modules/block_popups/_block_popups.scss */
+.modal .modal-box .modal-inner textarea {
+  border: none;
+  padding: 8px;
+  letter-spacing: 2px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  line-height: 13px;
+}
+/* line 164, brandworx/modules/block_popups/_block_popups.scss */
+.modal #mc-embedded-subscribe-form {
+  position: relative;
+  padding: 0 !important;
+}
+/* line 168, brandworx/modules/block_popups/_block_popups.scss */
+.modal #mc-embedded-subscribe-form input {
+  border-radius: unset !important;
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin: 2px;
+}
+/* line 177, brandworx/modules/block_popups/_block_popups.scss */
+.modal #mc-embedded-subscribe-form input[type="submit"] {
+  padding: 7px 5%;
+  margin-bottom: 30px;
+}
+/* line 184, brandworx/modules/block_popups/_block_popups.scss */
+.modal #mc-embedded-subscribe-form .fa-envelope-o {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  font-size: 14px;
+  z-index: 50;
+}
+/* line 195, brandworx/modules/block_popups/_block_popups.scss */
+.modal #mc_embed_signup .mc-field-group {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  text-align: left;
+  min-height: unset;
+}
+/* line 202, brandworx/modules/block_popups/_block_popups.scss */
+.modal #mc_embed_signup .mc-field-group label {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+/* line 212, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner {
+  text-align: center;
+  margin: 50px 0;
+}
+/* line 216, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner h1, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h2, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h3, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h4, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h5, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h6 {
+  position: relative;
+}
+/* line 219, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner h1::after, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h2::after, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h3::after, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h4::after, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h5::after, .modal[data-trigger="contact-popup"] .modal-box .modal-inner h6::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 115px;
+  height: 1px;
+  background: #444444;
+  margin: 10px auto 20px;
+}
+/* line 230, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form {
+  width: 85%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* line 235, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form .nf-form-fields-required {
+  display: none !important;
+}
+/* line 241, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container {
+  margin-bottom: 20px;
+}
+/* line 246, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container .nf-field-label label {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+/* line 257, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container.label-above .nf-field-label {
+  margin: 0;
+}
+/* line 262, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container textarea {
+  border: 2px solid #F4F4F4;
+  border-radius: 0;
+  height: 106px;
+}
+/* line 268, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field .nf-field-container input {
+  border: 2px solid #F4F4F4;
+  border-radius: 0;
+}
+/* line 278, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field:nth-child(2), .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field:nth-child(3) {
+  float: right;
+  width: 49%;
+  clear: right;
+}
+/* line 285, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field:nth-child(1), .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field:nth-child(4), .modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field:nth-child(5) {
+  float: left;
+  width: 49%;
+  clear: left;
+}
+/* line 293, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="contact-popup"] .modal-box .modal-inner form nf-field:nth-child(6) {
+  display: block;
+  width: 100%;
+}
+/* line 305, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="subscribe-popup"] .modal-box {
+  padding: 0;
+  max-width: 820px;
+}
+/* line 309, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="subscribe-popup"] .modal-box .modal-inner {
+  flex-wrap: nowrap;
+  padding-right: 5%;
+}
+/* line 313, brandworx/modules/block_popups/_block_popups.scss */
+.modal[data-trigger="subscribe-popup"] .modal-box .modal-inner .popup-image {
+  width: 50%;
+}
+/* line 321, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box {
+  padding: 30px 5% 20px;
+  background: url("brandworx/images/watercolor.png") no-repeat bottom right/74% #FAFAFA;
+  background-position-x: 145%;
+  background-position-y: 165%;
+}
+/* line 328, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner .popup-text {
+  width: 100%;
+}
+/* line 331, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner .popup-text h2, .modal.watercolor .modal-box .modal-inner .popup-text h3 {
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+/* line 337, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner .popup-text .nf-form-wrap .nf-form-fields-required {
+  display: none;
+}
+/* line 343, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner .popup-text .nf-form-wrap nf-field .nf-field-container {
+  margin: 0 0 15px;
+}
+/* line 347, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner .popup-text .nf-form-wrap nf-field:nth-child(1), .modal.watercolor .modal-box .modal-inner .popup-text .nf-form-wrap nf-field:nth-child(2) {
+  width: 100%;
+  float: none;
+}
+/* line 354, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner .popup-text .nf-form-wrap nf-field:last-child .nf-field-container {
+  margin: 0 0 0;
+  text-align: left;
+}
+/* line 363, brandworx/modules/block_popups/_block_popups.scss */
+.modal.watercolor .modal-box .modal-inner input[type="button"] {
+  margin: 0;
+}
+
+/* line 1, brandworx/modules/block_search/_block_search.scss */
+#search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 150000;
+  display: none;
+  cursor: pointer;
+}
+/* line 12, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 5px;
+  cursor: auto;
+}
+/* line 27, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box #search-close {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  z-index: 50;
+}
+/* line 33, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box #search-close .icon {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  color: white;
+  border-radius: 100%;
+}
+/* line 42, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .widget {
+  margin: 0;
+}
+/* line 46, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+/* line 54, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ECD4C9;
+  color: #fff;
+  font-size: 38px;
+  padding: 20px 38px;
+}
+/* line 63, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner label {
+  width: 100%;
+}
+/* line 67, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner input {
+  background: white;
+  flex: 1;
+}
+/* line 71, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner input.search-field {
+  width: 100%;
+  padding: 24px;
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;
+  box-shadow: none;
+  border: solid 1px #999999;
+  border-radius: 0;
+}
+/* line 82, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner input[type="submit"] {
+  flex: 0;
+}
+/* line 88, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner #searchsubmit {
+  background: url(../../images/search.png) center center no-repeat;
+  background-color: white;
+  font-size: 20px;
+  color: black;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  vertical-align: top;
+  float: left;
+  padding: 20px 20px 30px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+/* line 104, brandworx/modules/block_search/_block_search.scss */
+#search-modal .modal-box .modal-inner #searchsubmit:hover {
+  background-color: #eaeaea;
+}
+
+/* line 1, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  position: relative;
+  width: 100%;
+  color: #336699;
+}
+/* line 7, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep .icon {
+  width: 100px;
+  height: 15px;
+}
+/* line 11, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep .diamonds-before,
+.diamonds-sep .diamonds-after {
+  height: 1px;
+  background: #336699;
+}
+/* line 18, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep.align-left .diamonds-before {
+  width: 50px;
+}
+/* line 21, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep.align-left .diamonds-after {
+  width: 100%;
+}
+/* line 26, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep.align-center .diamonds-before {
+  flex: 1;
+}
+/* line 29, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep.align-center .diamonds-after {
+  flex: 1;
+}
+/* line 34, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep.align-right .diamonds-before {
+  width: 100%;
+}
+/* line 37, brandworx/modules/block_sep/_block_sep.scss */
+.diamonds-sep.align-right .diamonds-after {
+  width: 50px;
+}
+
+/* line 4, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icon {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 1px solid #E3E3E3;
+  z-index: 2;
+}
+
+/* line 17, brandworx/modules/block_share_icons/_block_share_icons.scss */
+input#postURL {
+  position: absolute;
+  right: -9999px;
+}
+
+/* line 21, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons {
+  position: relative;
+}
+/* line 24, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share {
+  position: relative;
+}
+/* line 27, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+}
+/* line 31, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner.vertical-share {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+}
+/* line 34, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner.vertical-share .social-share-title {
+  transform: rotate(90deg) translate(0, -167%);
+  transform-origin: top left;
+  margin-bottom: 60%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+/* line 45, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner.vertical-share .share-icons-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+/* line 56, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner.fade-share .social-share-title {
+  display: block;
+}
+/* line 60, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner.fade-share .share-icons-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  padding: 2px 20px;
+}
+/* line 69, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner .social-share-title {
+  display: none;
+}
+/* line 73, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .social-share-inner .share-icons-wrap {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  position: relative;
+}
+/* line 79, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .share {
+  margin: 8px;
+}
+/* line 83, brandworx/modules/block_share_icons/_block_share_icons.scss */
+.share-icons .social-share .share span {
+  margin-left: 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* line 1, brandworx/modules/block_social_icons/_block_social_icons.scss */
+.social-icons {
+  position: relative;
+}
+/* line 4, brandworx/modules/block_social_icons/_block_social_icons.scss */
+.social-icons .social-icons-header {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+/* line 12, brandworx/modules/block_social_icons/_block_social_icons.scss */
+.social-icon {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  font-size: 12px;
+  margin: 0 5px;
+}
+/* line 17, brandworx/modules/block_social_icons/_block_social_icons.scss */
+.social-icon span {
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 1, brandworx/modules/nav_mobile/_nav_mobile.scss */
+#mobile_nav_wrap {
+  display: none;
+  cursor: pointer;
+}
+/* line 5, brandworx/modules/nav_mobile/_nav_mobile.scss */
+#mobile_nav_wrap .mobile-nav-trigger-open {
+  display: none;
+  margin: 0px 20px;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  /* line 5, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  #mobile_nav_wrap .mobile-nav-trigger-open {
+    display: block;
+  }
+}
+/* line 16, brandworx/modules/nav_mobile/_nav_mobile.scss */
+#mobile_nav_wrap.toggled .mobile-nav-trigger-open {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  /* line 1, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  #mobile_nav_wrap {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 1, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  #mobile_nav_wrap {
+    display: block;
+  }
+  /* line 32, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  body.customize-support #mobile_nav_wrap .mobile-nav-outer {
+    top: 92px;
+  }
+  /* line 43, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  body.customize-support.lock_nav #mobile_nav_wrap .mobile-nav-outer {
+    top: 46px;
+  }
+}
+
+/* line 52, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: flex-start !important;
+  -webkit-align-items: flex-start !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  position: fixed;
+  max-width: 355px;
+  padding-top: 50px;
+  width: 100%;
+  top: 0;
+  right: -500px;
+  bottom: 0;
+  background: white;
+  overflow-y: scroll;
+  z-index: 1000000;
+}
+/* line 66, brandworx/modules/nav_mobile/_nav_mobile.scss */
+#colophon .mobile-nav-outer {
+  color: #444444;
+}
+/* line 79, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-trigger-close {
+  display: block;
+  font-size: 18px;
+  position: absolute;
+  top: 60px;
+  right: 27px;
+  width: 20px;
+  height: 20px;
+}
+/* line 90, brandworx/modules/nav_mobile/_nav_mobile.scss */
+#masthead.lock_nav #mobile_nav_wrap .mobile-nav-trigger-close {
+  top: 13px;
+}
+@media screen and (max-width: 768px) {
+  /* line 79, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  .mobile-nav-outer .mobile-nav-trigger-close {
+    top: 13px;
+  }
+}
+/* line 101, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer::-webkit-scrollbar {
+  width: 1px;
+}
+/* line 105, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer::-webkit-scrollbar-track {
+  background: #ffffff;
+  width: 1px;
+}
+/* line 110, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer::-webkit-scrollbar-thumb {
+  background-color: #444444;
+  width: 1px;
+}
+/* line 118, brandworx/modules/nav_mobile/_nav_mobile.scss */
+body.customize-support #mobile_nav_wrap .mobile-nav-outer {
+  top: 32px;
+}
+@media screen and (max-width: 782px) {
+  /* line 118, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  body.customize-support #mobile_nav_wrap .mobile-nav-outer {
+    top: 46px;
+  }
+}
+/* line 129, brandworx/modules/nav_mobile/_nav_mobile.scss */
+body.customize-support #masthead.lock_nav #mobile_nav_wrap .mobile-nav-outer {
+  top: 0;
+}
+/* line 137, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-image {
+  width: 100%;
+}
+/* line 141, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body {
+  width: 100%;
+  padding: 30px;
+}
+/* line 145, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body > * {
+  width: 100%;
+}
+/* line 149, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_logo {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+/* line 155, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_logo img {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+/* line 162, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_menu_container {
+  width: 100%;
+}
+/* line 165, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: flex-start !important;
+  -webkit-align-items: flex-start !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  width: 100%;
+  text-align: left;
+}
+/* line 179, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_menu_container #mobile_menu .menu-item a {
+  display: block;
+  margin-bottom: 20px;
+}
+/* line 187, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body .mobile-cta {
+  margin: 20px 0;
+}
+/* line 191, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body .social-icons {
+  margin: 35px 0;
+}
+/* line 195, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_search {
+  margin-bottom: 35px;
+}
+/* line 198, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_search .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+/* line 204, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_search .widget {
+  margin: 0;
+  width: 100%;
+}
+/* line 208, brandworx/modules/nav_mobile/_nav_mobile.scss */
+.mobile-nav-outer .mobile-nav-body #mobile_search .widget input {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  /* line 52, brandworx/modules/nav_mobile/_nav_mobile.scss */
+  .mobile-nav-outer {
+    padding-top: 45px;
+  }
+}
+
+/* line 220, brandworx/modules/nav_mobile/_nav_mobile.scss */
+#mobile_nav_bg {
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+}
+
+/* line 1, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials {
+  position: relative;
+  padding: 50px;
+  color: #ffffff;
+  background: linear-gradient(122.62deg, #336699 0%, #000066 100%);
+}
+/* line 7, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials a {
+  text-decoration: underline;
+}
+/* line 12, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container {
+  max-width: 1215px;
+}
+/* line 16, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider {
+  width: 100%;
+}
+/* line 20, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+}
+/* line 23, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-image {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 100%;
+}
+/* line 29, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+/* line 34, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-rating {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  margin: 16px 0 6px;
+}
+/* line 38, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-rating .icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+  color: #FFCC33;
+}
+/* line 46, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-text {
+  position: relative;
+  width: 100%;
+  margin-top: 35px;
+  text-align: justify;
+}
+/* line 52, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-text p {
+  font-size: 20px;
+  quotes: "“" "”" "‘" "’";
+}
+/* line 56, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-text p::before {
+  content: open-quote;
+}
+/* line 59, brandworx/modules/slider_testimonials/_slider_testimonials.scss */
+#testimonials .testimonials-container .testimonials-slider .testimonial .testimonial-inner .testimonial-text p::after {
+  content: close-quote;
+}
+
+/* line 1, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section {
+  position: relative;
+  background: #FAFAFA;
+  padding: 100px;
+}
+/* line 6, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: center !important;
+  -webkit-justify-content: center !important;
+  max-width: 1175px;
+  width: 100%;
+}
+/* line 12, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-title {
+  font-size: 48px;
+  text-align: center;
+}
+/* line 17, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-text {
+  width: 100%;
+  margin: 20px 0;
+}
+/* line 22, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form {
+  width: 100%;
+  max-width: 615px;
+  margin: 0 auto;
+  background: #336699;
+  color: #ffffff;
+  padding: 45px 60px;
+  box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.6);
+}
+/* line 36, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form form nf-field {
+  width: 100%;
+}
+/* line 39, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form form nf-field .nf-field-container {
+  margin-bottom: 15px;
+}
+/* line 42, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form form nf-field .nf-field-container .nf-field-label {
+  margin: 0 !important;
+}
+/* line 48, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form form nf-field:last-child .nf-field-container {
+  margin-bottom: 0;
+}
+/* line 53, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form form nf-field:nth-child(2) {
+  width: 48%;
+  float: left;
+  clear: left;
+}
+@media screen and (max-width: 600px) {
+  /* line 53, brandworx/modules/section_contact/_section_contact.scss */
+  #contact_section .contact-container .contact-form form nf-field:nth-child(2) {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
+/* line 64, brandworx/modules/section_contact/_section_contact.scss */
+#contact_section .contact-container .contact-form form nf-field:nth-child(3) {
+  width: 48%;
+  float: right;
+  clear: right;
+}
+@media screen and (max-width: 600px) {
+  /* line 64, brandworx/modules/section_contact/_section_contact.scss */
+  #contact_section .contact-container .contact-form form nf-field:nth-child(3) {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 22, brandworx/modules/section_contact/_section_contact.scss */
+  #contact_section .contact-container .contact-form {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 1, brandworx/modules/section_contact/_section_contact.scss */
+  #contact_section {
+    padding: 60px;
+  }
+}
+
+/* line 1, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows {
+  position: relative;
+}
+/* line 6, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row {
+  padding: 120px 60px;
+}
+/* line 12, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row .content-row-inner .content-row-image {
+  width: 50%;
+  box-shadow: 5px 5px 10px -2px rgba(68, 68, 68, 0.3);
+}
+@media screen and (max-width: 768px) {
+  /* line 12, brandworx/modules/section_content_rows/_section_content_rows.scss */
+  #content_rows .content-rows-container .content-row .content-row-inner .content-row-image {
+    width: 100%;
+  }
+}
+/* line 21, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row .content-row-inner .content-row-body {
+  width: 45%;
+}
+/* line 24, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row .content-row-inner .content-row-body .content-row-title {
+  margin: 0;
+}
+/* line 28, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row .content-row-inner .content-row-body .content-row-text {
+  margin: 20px 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 21, brandworx/modules/section_content_rows/_section_content_rows.scss */
+  #content_rows .content-rows-container .content-row .content-row-inner .content-row-body {
+    width: 100%;
+  }
+}
+/* line 39, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row:nth-child(2n) {
+  background: #FAFAFA;
+}
+/* line 42, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row:nth-child(2n) .content-row-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  -webkit-flex-direction: row-reverse !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+@media screen and (max-width: 768px) {
+  /* line 42, brandworx/modules/section_content_rows/_section_content_rows.scss */
+  #content_rows .content-rows-container .content-row:nth-child(2n) .content-row-inner {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+}
+/* line 51, brandworx/modules/section_content_rows/_section_content_rows.scss */
+#content_rows .content-rows-container .content-row:nth-child(2n+1) .content-row-inner {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+}
+@media screen and (max-width: 768px) {
+  /* line 51, brandworx/modules/section_content_rows/_section_content_rows.scss */
+  #content_rows .content-rows-container .content-row:nth-child(2n+1) .content-row-inner {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 6, brandworx/modules/section_content_rows/_section_content_rows.scss */
+  #content_rows .content-rows-container .content-row {
+    padding: 60px;
+  }
+}
+
+/* line 3, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: flex-start !important;
+  -webkit-align-items: flex-start !important;
+  justify-content: space-between !important;
+  -webkit-justify-content: space-between !important;
+  position: relative;
+}
+/* line 7, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col {
+  width: 48%;
+}
+/* line 10, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col .faq-item {
+  margin-bottom: 20px;
+}
+/* line 13, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col .faq-item .faq-title {
+  background: #ffffff;
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #E3E3E3;
+  padding: 10px;
+}
+/* line 23, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col .faq-item .faq-title span {
+  width: 90%;
+}
+/* line 27, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col .faq-item .faq-title .icon {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 35, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col .faq-item .faq-text {
+  display: none;
+  background: #FAFAFA;
+  padding: 0 10px 10px;
+  text-align: left;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+  color: #7d7d7d;
+  box-shadow: 0px 5px 7px 2px rgba(68, 68, 68, 0.1);
+}
+/* line 48, brandworx/modules/section_faq/_section_faq.scss */
+#faq-module .page-faq-wrapper .faq-col .faq-item.toggled .faq-title .icon {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 768px) {
+  /* line 58, brandworx/modules/section_faq/_section_faq.scss */
+  #faq-module .page-faq-wrapper {
+    display: -webkit-flex !important;
+    display: flex !important;
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+    align-items: center !important;
+    -webkit-align-items: center !important;
+    justify-content: flex-start !important;
+    -webkit-justify-content: flex-start !important;
+    padding: 0 60px;
+  }
+  /* line 62, brandworx/modules/section_faq/_section_faq.scss */
+  #faq-module .page-faq-wrapper .faq-col {
+    width: 100%;
+  }
+  /* line 67, brandworx/modules/section_faq/_section_faq.scss */
+  #faq-module .page-faq-wrapper .faq-col .faq-item .faq-title {
+    font-size: 14px;
+  }
+}
+
+/* line 1, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  position: relative;
+  height: 100vh;
+  padding: 90px;
+}
+/* line 7, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(106.33deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 90%);
+  z-index: 0;
+}
+/* line 19, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .hero-title {
+  position: relative;
+  font-size: 72px;
+  color: #336699;
+  z-index: 1;
+}
+/* line 26, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim {
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: row !important;
+  -webkit-flex-direction: row !important;
+  align-items: center !important;
+  -webkit-align-items: center !important;
+  justify-content: flex-start !important;
+  -webkit-justify-content: flex-start !important;
+  position: relative;
+}
+/* line 30, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper {
+  display: inline;
+  text-indent: 10px;
+  position: absolute;
+  left: 100%;
+  top: 2px;
+}
+/* line 37, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper .text-anim__word {
+  position: absolute;
+  opacity: 0;
+}
+@keyframes rotateWords {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 53, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_2 .text-anim__word {
+  animation: rotateWords 6s linear infinite 0s;
+}
+/* line 56, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_2 .text-anim__word:nth-child(2) {
+  animation-delay: 3s;
+}
+/* line 62, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_3 .text-anim__word {
+  animation: rotateWords 9s linear infinite 0s;
+}
+/* line 65, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_3 .text-anim__word:nth-child(2) {
+  animation-delay: 3s;
+}
+/* line 68, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_3 .text-anim__word:nth-child(3) {
+  animation-delay: 6s;
+}
+/* line 74, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_4 .text-anim__word {
+  animation: rotateWords 12s linear infinite 0s;
+}
+/* line 77, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_4 .text-anim__word:nth-child(2) {
+  animation-delay: 3s;
+}
+/* line 80, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_4 .text-anim__word:nth-child(3) {
+  animation-delay: 6s;
+}
+/* line 83, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_4 .text-anim__word:nth-child(4) {
+  animation-delay: 9s;
+}
+/* line 89, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_5 .text-anim__word {
+  animation: rotateWords 15s linear infinite 0s;
+}
+/* line 92, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_5 .text-anim__word:nth-child(2) {
+  animation-delay: 3s;
+}
+/* line 96, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_5 .text-anim__word:nth-child(3) {
+  animation-delay: 6s;
+}
+/* line 99, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_5 .text-anim__word:nth-child(4) {
+  animation-delay: 9s;
+}
+/* line 102, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .text-anim .text-anim__wrapper.text-anim_5 .text-anim__word:nth-child(5) {
+  animation-delay: 12s;
+}
+/* line 110, brandworx/modules/section_hero/_section_hero.scss */
+#hero_section .scroll-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  color: #FAFAFA;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  animation: bounce 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+}

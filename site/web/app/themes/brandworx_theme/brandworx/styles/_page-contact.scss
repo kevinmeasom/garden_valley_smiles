@@ -1,0 +1,97 @@
+#contact_page {
+    padding: 50px;
+
+    .contact-wrapper {
+        @include flex(row, center, cetner);
+        width: 100%;
+
+        .contact-image {
+            width: 56%;
+        }
+
+        .contact-body {
+            position: relative;
+            width: 54%;
+            margin-left: -10%;
+            background: $secondary_color;
+            padding: 30px;
+
+            .page-title {
+                text-align: left;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            input {
+                border: 1px solid black !important;
+                border-radius: 0 !important;
+            }
+            textarea {
+                border: 1px solid black !important;
+                border-radius: 0 !important;
+            }
+            .nf-field-container {
+                margin-bottom: 20px;
+            }
+            nf-field {
+                @include flex(row, center, start);
+                display: block;
+
+                .nf-field-container {
+                    width: 100%;
+
+                    &.submit-container {
+                        width: auto;
+                    }
+                }
+
+                &:last-child {
+                    @include flex(row, center, end);
+                }
+                
+                .submit-wrap {
+
+                    .nf-field-element {
+                        @extend %animate-right;
+                    }
+                }
+
+                input[value="Submit"][type="button"] {
+                    background: unset;
+                    border: none !important;
+                    color: black;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    margin: 0 auto;
+                    font-family: $font_body;
+                    text-transform: capitalize;
+                }
+            }
+            .nf-field-element {
+                textarea {
+                    height: 106px;
+                }
+            }
+            .label-above {
+                .nf-field-label {
+                    margin: 0;
+                }
+            }
+            .nf-field-label {
+                label {
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                }
+            }
+            .nf-form-fields-required {
+                display: none !important;
+            }
+        }
+    }
+}

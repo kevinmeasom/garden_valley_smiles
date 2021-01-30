@@ -1,0 +1,30 @@
+---
+- name: Activate Theme
+  command: wp theme activate {{ item.value.theme_name | default('starter_theme') }} --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Activate classic-editor
+  command: wp plugin activate classic-editor --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  
+- name: Activate ewww-image-optimizer
+  command: wp plugin activate ewww-image-optimizer --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Activate ninja-forms
+  command: wp plugin activate ninja-forms --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Activate post-duplicator
+  command: wp plugin activate post-duplicator --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"

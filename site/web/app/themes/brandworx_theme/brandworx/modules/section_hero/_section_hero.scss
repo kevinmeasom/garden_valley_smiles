@@ -1,0 +1,147 @@
+#hero_section {
+    @include flex(row, center, start);
+    position: relative;
+    height: 100vh;
+    padding: 90px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $bg_gradient_white;
+        z-index: 0;
+    }
+
+    .hero-title {
+        position: relative;
+        font-size: 72px;
+        color: $accent_color_2;
+        z-index: 1;
+    }
+
+    .text-anim {
+        @include flex(row, center, start);
+        position: relative;
+
+        .text-anim__wrapper {
+            display: inline;
+            text-indent: 10px;
+            position: absolute;
+            left: 100%;
+            top: 2px;
+
+            .text-anim__word {
+                position: absolute;
+                opacity: 0;
+
+                @keyframes rotateWords {
+                    0% { opacity: 0; animation-timing-function: ease-in; }
+                    5% { opacity: 0.5; }
+                    10% { opacity: 1; }
+                    20% { opacity: 1; }
+                    25% { opacity: 0.5; }
+                    30% { opacity: 0; }
+                    100% { opacity: 0; }
+                }
+            }
+
+            &.text-anim_2 {
+                .text-anim__word {
+                    animation: rotateWords 6s linear infinite 0s;
+
+                    &:nth-child(2) {
+                        animation-delay: 3s; 
+                    }
+                }
+            }
+            &.text-anim_3 {
+                .text-anim__word {
+                    animation: rotateWords 9s linear infinite 0s;
+
+                    &:nth-child(2) {
+                        animation-delay: 3s; 
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 6s; 
+                    }
+                }
+            }
+            &.text-anim_4 {
+                .text-anim__word {
+                    animation: rotateWords 12s linear infinite 0s;
+
+                    &:nth-child(2) {
+                        animation-delay: 3s; 
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 6s; 
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 9s; 
+                    }
+                }
+            }
+            &.text-anim_5 {
+                .text-anim__word {
+                    animation: rotateWords 15s linear infinite 0s;
+
+                    &:nth-child(2) {
+                        animation-delay: 3s; 
+                        
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 6s; 
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 9s; 
+                    }
+                    &:nth-child(5) {
+                        animation-delay: 12s; 
+                    }
+                }
+            }
+        }
+    }
+
+    .scroll-down {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 35px;
+        color: $tertiary_color;
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        animation: bounce 1s; 
+        animation-direction: alternate; 
+        animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+        animation-iteration-count: infinite;
+        -webkit-animation-name: bounce; 
+        -webkit-animation-duration: 1s; 
+        -webkit-animation-direction: alternate; 
+        -webkit-animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+        -webkit-animation-iteration-count: infinite;
+    }
+    @keyframes bounce { 
+        from { 
+            transform: translate3d(0, 0, 0); 
+        } 
+        to { 
+            transform: translate3d(0, 20px, 0); 
+        } 
+    } 
+    @-webkit-keyframes bounce { 
+        from { 
+            -webkit-transform: translate3d(0, 0, 0); 
+            transform: translate3d(0, 0, 0); 
+        } 
+        to { 
+            -webkit-transform: translate3d(0, 20px, 0); 
+            transform: translate3d(0, 20px, 0); 
+        } 
+    } 
+}

@@ -1,0 +1,26 @@
+# Application
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/themes/**/.sass-cache
+web/app/plugins/**/*.log
+web/app/ewww/debug.log
+*.sql
+!dev-starter.sql
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml

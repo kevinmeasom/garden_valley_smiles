@@ -1,0 +1,76 @@
+article.post,
+article.snapshot {
+    position: relative;
+    padding: 50px 0 0;
+
+    .entry-content {
+        width: 100%;
+        padding: 0 60px;
+
+        ul, li {
+            font-size: $body;
+            font-family: $font_body;
+            line-height: 31px;
+            letter-spacing: 0.5px;
+        }
+
+        .rs-code{
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+}
+
+
+.entry-header {
+
+    .entry-header-inner {
+        @include flex(wrap, center, start);
+    }
+}
+
+.entry-footer {
+    padding: 10px;
+    margin: 50px 0 0;
+    border-top: 1px solid $line_color;
+    border-bottom: 1px solid $line_color;
+    font-family: $font_nav;
+    text-transform: uppercase;
+
+    a {
+        @extend %alt_link;
+    }
+
+    .entry-footer-actions {
+
+        & > * {
+            margin: 0 10px;
+            font-family: $font_nav;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+        
+        span {
+            margin-left: 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+    @include respond-to(medium, max) {
+        padding: 15px 0px;
+        margin: 20px 0;
+
+        .entry-footer-actions {
+
+            & > * {
+                margin: 0px;
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# COMMENTS
+--------------------------------------------------------------*/
+@import "comments";

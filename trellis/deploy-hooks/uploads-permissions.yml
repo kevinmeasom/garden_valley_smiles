@@ -1,0 +1,8 @@
+---
+- name: Set Uploads Permissions
+  command: chown -R warn=False web:www-data uploads
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('shared') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  become: yes
+  remote_user: root

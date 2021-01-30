@@ -1,0 +1,20 @@
+---
+- name: Install WP
+  command: wp core install 
+           --url="{{ site_env.wp_home }}"
+           --title=Brandworx
+           --admin_user=brandworx
+           --admin_password=DSnBbtFE
+           --admin_email=kevin@brandworxmedia.com
+           --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  when: wp_installed.rc == 1
+
+
+# provision
+# deploy
+#   if wp installed
+#     install wp
+# migrate db/content

@@ -1,0 +1,29 @@
+# Documentation: https://roots.io/trellis/docs/ssh-keys/
+admin_user: admin
+
+# Also define 'vault_users' (`group_vars/staging/vault.yml`, `group_vars/production/vault.yml`)
+users:
+  - name: "{{ web_user }}"
+    groups:
+      - "{{ web_group }}"
+    keys:
+      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDFviQKH+scAyt94y3EfFGjbODT+eQvuznHYYXyfs2ZNz6wt0RTm45eGJ01Bwo69oubL01lE/XomqdY1qC/NVIWir7Zbwzt6jW0slMTa/G7eB4p/UqD68ZZa9kVWmWwtkWTvfiNBu9UA+WqOXxOJEJJPFZvSFgKKF5txZ4RdjfXg1LUV5yjwLHbgsb7KIyGvuDzSqdiFqxUiH1vhcAsMDFevzuYxnCLOkpD9zKSMnR1pwttvN/H7NBW4ExPtdoJCcxw9x9Z/TdlPAToNHdL7woGoA8A3o/1Ls4aLkrbBW/H7kWZsXOIO1iq01bJHGTvBgr9lkqrdZCt4GSg4MbJeCn kevinmeasom1@Kevins"
+      # - https://github.com/username.keys
+  - name: "{{ admin_user }}"
+    groups:
+      - sudo
+    keys:
+      - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDFviQKH+scAyt94y3EfFGjbODT+eQvuznHYYXyfs2ZNz6wt0RTm45eGJ01Bwo69oubL01lE/XomqdY1qC/NVIWir7Zbwzt6jW0slMTa/G7eB4p/UqD68ZZa9kVWmWwtkWTvfiNBu9UA+WqOXxOJEJJPFZvSFgKKF5txZ4RdjfXg1LUV5yjwLHbgsb7KIyGvuDzSqdiFqxUiH1vhcAsMDFevzuYxnCLOkpD9zKSMnR1pwttvN/H7NBW4ExPtdoJCcxw9x9Z/TdlPAToNHdL7woGoA8A3o/1Ls4aLkrbBW/H7kWZsXOIO1iq01bJHGTvBgr9lkqrdZCt4GSg4MbJeCn kevinmeasom1@Kevins"
+      # - https://github.com/username.keys
+  - name: "kevin"
+    groups:
+      - sudo
+    keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDFviQKH+scAyt94y3EfFGjbODT+eQvuznHYYXyfs2ZNz6wt0RTm45eGJ01Bwo69oubL01lE/XomqdY1qC/NVIWir7Zbwzt6jW0slMTa/G7eB4p/UqD68ZZa9kVWmWwtkWTvfiNBu9UA+WqOXxOJEJJPFZvSFgKKF5txZ4RdjfXg1LUV5yjwLHbgsb7KIyGvuDzSqdiFqxUiH1vhcAsMDFevzuYxnCLOkpD9zKSMnR1pwttvN/H7NBW4ExPtdoJCcxw9x9Z/TdlPAToNHdL7woGoA8A3o/1Ls4aLkrbBW/H7kWZsXOIO1iq01bJHGTvBgr9lkqrdZCt4GSg4MbJeCn kevinmeasom1@Kevins"
+
+web_user: web
+web_group: www-data
+web_sudoers:
+  - "/usr/sbin/service php7.3-fpm *"

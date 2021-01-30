@@ -1,0 +1,12 @@
+---
+- name: Activate akismet
+  command: wp plugin activate akismet --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Activate all-in-one-wp-security-and-firewall
+  command: wp plugin activate all-in-one-wp-security-and-firewall --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"

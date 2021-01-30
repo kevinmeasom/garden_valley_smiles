@@ -1,0 +1,65 @@
+#content_rows {
+    position: relative;
+
+    .content-rows-container {
+
+        .content-row {
+            padding: 120px 60px;
+
+            .content-row-inner {
+                @extend %container_xl;
+                
+                .content-row-image {
+                    width: 50%;
+                    box-shadow: 5px 5px 10px -2px rgba(68, 68, 68, 0.3);
+
+                    @include respond-to(large, max){
+                        width: 100%;
+                    }
+                }
+    
+                .content-row-body {
+                    width: 45%;
+
+                    .content-row-title {
+                        margin: 0;
+                    }
+    
+                    .content-row-text {
+                        margin: 20px 0;
+                    }
+
+                    @include respond-to(large, max){
+                        width: 100%;
+                    }
+                }
+    
+            }
+            
+            &:nth-child(2n){
+                background: $bg_color;
+                
+                .content-row-inner {
+                    @include flex(row-rev, center, between);
+
+                    @include respond-to(large, max){
+                        @include flex(col, center, center);
+                    }
+                }
+            }
+            &:nth-child(2n+1){
+                .content-row-inner {
+                    @include flex(row, center, between);
+
+                    @include respond-to(large, max){
+                        @include flex(col, center, center);
+                    }
+                }
+            }
+
+            @include respond-to(large, max){
+                padding: 60px;
+            }
+        }
+    }
+}

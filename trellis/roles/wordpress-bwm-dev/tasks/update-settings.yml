@@ -1,0 +1,51 @@
+---
+# OPTION NAME = OPTION DB NAME = EXAMPLE VALUE
+# Tagline = blogdescription = "TAGLINE"
+# Timezone = gmt_offset = -7
+# Week Starts On = start_of_week = 0
+# For each article in a feed, show = rss_use_excerpt = 1
+# Search Engine Visibility = blog_public = 0
+# comment_moderation = 1
+# comment_whitelist = 0
+
+- name: Set Title
+  command: wp option update blogname "{{ item.value.site_title | default(item.key) }}" --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Set Tagline
+  command: wp option update blogdescription "{{ item.value.tagline | default('') }}" --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Set Timezone
+  command: wp option update gmt_offset "{{ item.value.timezone | default('') }}" --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Set Start of Week
+  command: wp option update start_of_week 0 --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Set RSS Use Excerpt
+  command: wp option update rss_use_excerpt 1 --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Set Comment Moderation
+  command: wp option update comment_moderation 1 --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+
+- name: Set Comment Whitelist
+  command: wp option update comment_whitelist 0 --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"

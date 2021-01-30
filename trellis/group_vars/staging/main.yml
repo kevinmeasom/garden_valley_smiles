@@ -1,0 +1,5 @@
+mysql_root_password: "{{ vault_mysql_root_password }}" # Define this variable in group_vars/staging/vault.yml
+deploy_finalize_after:
+  - "{{ playbook_dir }}/roles/deploy/hooks/finalize-after.yml"
+  - "{{ playbook_dir }}/deploy-hooks/install-wp.yml"
+  - "{{ playbook_dir }}/deploy-hooks/uploads-permissions.yml"

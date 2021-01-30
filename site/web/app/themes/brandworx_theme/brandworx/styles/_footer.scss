@@ -1,0 +1,92 @@
+#footer_menu_container {
+    background: $bg_color;
+    border-top: 1px solid $accent_color_3;
+    padding: 15px 30px;
+
+    #footer_menu {
+        @extend %nav;
+        @include flex(row, center, center);
+    }
+}
+
+.site-disclaimer {
+    text-align: center;
+    padding: 10px;
+    background: $accent_color_2;
+    color: $secondary_color;
+
+    p {
+        text-align: center;
+    }
+
+    a {
+        @extend %white_link;
+
+        &:hover {
+            color: $secondary_color !important;
+            text-decoration: underline !important;
+        }
+    }
+}
+
+#colophon {
+    position: relative;
+    padding: 13px 30px;
+    background: $footer_bg;
+    color: $footer_text;
+
+    #footer_menu_container {
+        margin: 0 10px;    
+    }
+
+    #footer_menu {
+        @extend %nav;
+        @include flex(wrap, center, center);
+    }
+
+    a {
+        @extend %footer_link;
+    }
+
+    .site-info {
+        @include flex(row, center, between);
+
+        .site-copy {
+            @include flex(row, center, start);
+
+            .icon {
+                width: 94px;
+                height: 15px;
+                margin-right: 20px;
+            }
+        }
+
+        .site-built {
+            span {
+                @include flex(row, center, center);
+
+                a {
+                    margin-left: 5px;
+                }
+            }
+
+            img{
+                max-height: 25px;
+                margin-top: 1px;
+                margin-left: 4px;
+            }
+        }
+
+        @include respond-to(large, max){
+            @include flex(col, center, center);
+            text-align: center !important;
+            
+            .site-copy {
+                @include flex(col, center, center);
+            }
+            .site-built {
+                @include flex(row, center, center);
+            }
+        }
+    }
+}

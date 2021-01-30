@@ -1,0 +1,646 @@
+// Font Face
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;500;700&display=swap');
+
+// Map of breakpoints
+$breakpoints: (
+    small: 320px,
+    medium: 600px,
+    large: 768px,
+    xlarge: 960px,
+    xxlarge: 1024px
+);
+ 
+// Respond-To Mixin
+@mixin respond-to($breakpoint, $direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @if $direction == "min" {
+            $value: map-get($breakpoints, $breakpoint);
+         
+            @media screen and (min-width: $value) {
+                @content;
+            }
+        }
+        @if $direction == "max" {
+            $value: map-get($breakpoints, $breakpoint);
+         
+            @media screen and (max-width: $value) {
+                @content;
+            }
+        }
+    } @else {
+        @if $direction == "min" {
+            $value: $breakpoint + 'px';
+         
+            @media screen and (min-width: $value) {
+                @content;
+            }
+        }
+        @if $direction == "max" {
+            $value: $breakpoint + 'px';
+         
+            @media screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+
+// COLORS
+$primary_color: #444444;
+$secondary_color: #ffffff;
+$tertiary_color: #FAFAFA;
+$accent_color: #FFCC33;
+$accent_color_2: #336699;
+$accent_color_3: #000066;
+$btn_color_primary: #FFCC33;
+$btn_border_primary: #FFCC33;
+$btn_text_primary: #444444;
+$btn_hover_primary: #336699;
+$btn_hover_border_primary: #336699;
+$btn_hover_text_primary: #FFFFFF;
+$btn_color_secondary: #FAFAFA;
+$btn_border_secondary: #FAFAFA;
+$btn_text_secondary: #444444;
+$btn_hover_secondary: #336699;
+$btn_hover_border_secondary: #336699;
+$btn_hover_text_secondary: #FFFFFF;
+$btn_color_tertiary: #336699;
+$btn_border_tertiary: #336699;
+$btn_text_tertiary: #FFFFFF;
+$btn_hover_tertiary: #FAFAFA;
+$btn_hover_border_tertiary: #FAFAFA;
+$btn_hover_text_tertiary: #444444;
+$bg_color: #FAFAFA;
+$bg_color_2: #FFCC33;
+$bg_gradient_blue: linear-gradient(122.62deg, #336699 0%, #000066 100%);
+$bg_gradient_white: linear-gradient(106.33deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 90%);
+$bg_gradient_yellow: linear-gradient(122.62deg, #FFFF99 0%, #FFCC33 100%);
+$header_bg: #FAFAFA;
+$header_text: #336699;
+$header_hover: #336699;
+$footer_bg: #FFCC33;
+$footer_text: #444444;
+$link_color: #336699;
+$line_color: #E3E3E3;
+
+// SPACING
+$pad: 30px;
+$pad_small: 30px;
+
+
+// SIZES
+$full: 100%;
+$half: 49%;
+$third: 32%;
+$fourth: 23%;
+$fifth: 19%;
+
+// Typography
+$font_title: 'Cormorant Garamond', serif;
+$font_body: 'Montserrat', sans-serif;
+$font_button: 'Montserrat', sans-serif;
+$font_nav: 'Montserrat', sans-serif;
+$font_nav2: 'Montserrat', sans-serif;
+$font_accent: 'Montserrat', sans-serif;
+$font_script: 'Cormorant Garamond', serif;
+
+// FONTS
+$h1: 48px;
+$h2: 32px;
+$h3: 24px;
+$h4: 20px;
+$h5: 16px;
+$h6: 16px;
+$body: 14px;
+
+%heading {
+    font-family: $font_title;
+    font-weight: 100;
+    line-height: 1.5em;
+    margin: 0;
+}
+%banner_heading {
+    font-family: $font_body;
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 0;
+}
+%body_heading {
+    font-family: $font_body;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+}
+%body {
+    font-family: $font_body;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+%ease {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; 
+}
+
+%link {
+    @extend %ease;
+    color: $link_color;
+    outline: none;
+    text-decoration: none;
+
+    .icon {
+        -webkit-transition: unset;
+        -moz-transition: unset;
+        -o-transition: unset;
+        transition: unset;
+    }
+    
+    &:focus, &:active, &:visited {
+        color: $link_color;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $primary_color;
+    }
+}
+
+%alt_link {
+    @extend %ease;
+    color: $primary_color;
+    outline: none;
+    text-decoration: none;
+
+    .icon {
+        -webkit-transition: unset;
+        -moz-transition: unset;
+        -o-transition: unset;
+        transition: unset;
+    }
+
+    &:focus, &:active, &:visited {
+        color: $primary_color;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $link_color;
+    }
+}
+
+%white_link {
+    @extend %ease;
+    color: $secondary_color;
+    outline: none;
+    text-decoration: none;
+
+    .icon {
+        -webkit-transition: unset;
+        -moz-transition: unset;
+        -o-transition: unset;
+        transition: unset;
+    }
+
+    &:focus, &:active, &:visited {
+        color: $secondary_color;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $link_color;
+    }
+}
+
+%bg_link {
+    @extend %ease;
+    position: relative;
+    color: $primary_color;
+    outline: none;
+    text-decoration: none;
+    z-index: 1;
+
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::after {
+        @extend %ease;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $accent_color;
+        z-index: -1;
+    }
+
+    &:hover, a:focus, a:active, a:visited {
+
+        &::after {
+            top: 0px;
+        }
+    }
+}
+
+%nav_link {
+    @extend %ease;
+    color: $header_text;
+    outline: none;
+    text-decoration: none;
+
+    .icon {
+        -webkit-transition: unset;
+        -moz-transition: unset;
+        -o-transition: unset;
+        transition: unset;
+    }
+
+    &:focus, &:active, &:visited {
+        color: $header_text;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $header_hover;
+    }
+}
+
+%footer_link {
+    @extend %ease;
+    color: $footer_text;
+    outline: none;
+    text-decoration: underline;
+
+    .icon {
+        -webkit-transition: unset;
+        -moz-transition: unset;
+        -o-transition: unset;
+        transition: unset;
+    }
+
+    &:focus, &:active, &:visited {
+        color: $footer_text;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $link_color;
+    }
+}
+
+
+@mixin flex($direction: null, $align: null, $justify: null) {
+    display: -webkit-flex !important;
+    display: flex !important;
+
+    @if $direction == "row" {
+        flex-direction: row !important;
+        -webkit-flex-direction: row !important;
+    }
+    @if $direction == "row-rev" {
+        flex-direction: row-reverse !important;
+        -webkit-flex-direction: row-reverse !important;
+    }
+    @if $direction == "col" {
+        flex-direction: column !important;
+        -webkit-flex-direction: column !important;
+    }
+    @if $direction == "col-rev" {
+        flex-direction: column-reverse !important;
+        -webkit-flex-direction: column-reverse !important;
+    }
+    @if $direction == "wrap" {
+        flex-wrap: wrap !important;
+        -webkit-flex-wrap: wrap !important;
+    }
+    @if $direction == "unset" {
+        flex-wrap: unset !important;
+        -webkit-flex-wrap: unset !important;
+    }
+    @if $align == "start" {
+        align-items: flex-start !important;
+        -webkit-align-items: flex-start !important;
+    }
+    @if $align == "center" {
+        align-items: center !important;
+        -webkit-align-items: center !important;
+    }
+    @if $align == "end" {
+        align-items: flex-end !important;
+        -webkit-align-items: flex-end !important;
+    }
+    @if $align == "unset" {
+        align-items: unset !important;
+        -webkit-align-items: unset !important;
+    }
+    @if $justify == "start" {
+        justify-content: flex-start !important;
+        -webkit-justify-content: flex-start !important;
+    }
+    @if $justify == "center" {
+        justify-content: center !important;
+        -webkit-justify-content: center !important;
+    }
+    @if $justify == "around" {
+        justify-content: space-around !important;
+        -webkit-justify-content: space-around !important;
+    }
+    @if $justify == "between" {
+        justify-content: space-between !important;
+        -webkit-justify-content: space-between !important;
+    }
+    @if $justify == "end" {
+        justify-content: flex-end !important;
+        -webkit-justify-content: flex-end !important;
+    }
+    @if $justify == "unset" {
+        justify-content: unset !important;
+        -webkit-justify-content: unset !important;
+    }
+}
+
+%nav {
+    display: -webkit-flex;
+    display: flex;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+    
+    li {
+        position: relative;
+        float: none;
+        padding: 0 10px;
+        white-space: nowrap;
+
+        .sub-menu {
+            @extend %ease;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            margin: 0;
+            list-style: none;
+            transform: translate(-35%, 0);
+            top: 100%;
+            text-align: left;
+            padding: 15px 30px;
+            background: $secondary_color;
+            white-space: nowrap;
+            box-shadow: unset;
+            z-index: 100;
+
+            li {
+                padding: 5px 0;
+            }
+            
+            a {
+                width: auto;
+            }
+        }
+
+        &:hover {
+            & > a {
+                text-decoration: underline;
+            }
+            .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &.current-menu-item {
+            & > a {
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+
+        .icon {
+            position: relative;
+            top: -1px;
+            width: 10px;
+            height: 10px;
+            margin-left: 4px;
+        }
+
+        &.menu-item-header {
+            & > .menu-item-header {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+%container {
+    width: 85%;
+    max-width: 960px;
+    margin: 0 auto !important;
+}
+%container_sm {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto !important;
+}
+%container_md {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto !important;
+}
+%container_lg {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto !important;
+}
+%container_xl {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto !important;
+}
+
+%fade {
+    // apply to parent. child element that you want to fade in must have a class of .fade
+
+    & > .fade {
+        @extend %ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover {
+        
+        & > .fade {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+%btn {
+    display: inline-block !important;
+    padding: 12px 40px !important;
+    border-radius: 100px !important;
+    font-family: $font_button !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    box-shadow: 0px 5px 7px 2px rgba(68, 68, 68, 0.1) !important;
+
+    &:hover {
+        box-shadow: 0px 5px 7px 2px rgba(68, 68, 68, 0.5) !important;
+    }
+
+    @include respond-to(1200, max){
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+%btn-primary {
+    @extend %btn;
+    background: $btn_color_primary !important;
+    border: 2px solid $btn_border_primary !important;
+    color: $btn_text_primary !important;
+    
+    a {
+        color: $btn_text_primary !important;
+    }
+    
+    .icon,
+    &.icon {
+        fill: $btn_text_primary !important;
+    }
+    
+    &:hover {
+        background: $btn_hover_primary !important;
+        border: 2px solid $btn_hover_border_primary !important;
+        color: $btn_hover_text_primary !important;
+        
+        a {
+            color: $btn_hover_text_primary !important;
+        }
+        
+        .icon {
+            fill: $btn_hover_text_primary !important;
+        }
+    }
+
+}
+
+%btn-secondary {
+    @extend %btn;
+    background: $btn_color_secondary !important;
+    border: 2px solid $btn_border_secondary !important;
+    color: $btn_text_secondary !important;
+    
+    a {
+        color: $btn_text_secondary !important;
+    }
+
+    .icon,
+    &.icon {
+        fill: $btn_text_secondary !important;
+    }
+
+    &:hover {
+        background: $btn_hover_secondary !important;
+        border: 2px solid $btn_hover_border_secondary !important;
+        color: $btn_hover_text_secondary !important;
+        
+        a {
+            color: $btn_hover_text_secondary !important;
+        }
+        
+        .icon {
+            fill: $btn_hover_text_secondary !important;
+        }
+    }
+}
+
+%btn-tertiary {
+    @extend %btn;
+    background: $btn_color_tertiary !important;
+    border: 2px solid $btn_border_tertiary !important;
+    color: $btn_text_tertiary !important;
+    
+    a {
+        color: $btn_text_tertiary !important;
+    }
+
+    .icon,
+    &.icon {
+        fill: $btn_text_tertiary !important;
+    }
+
+    &:hover {
+        background: $btn_hover_tertiary !important;
+        border: 2px solid $btn_hover_border_tertiary !important;
+        color: $btn_hover_text_tertiary !important;
+        
+        a {
+            color: $btn_hover_text_tertiary !important;
+        }
+        
+        .icon {
+            fill: $btn_hover_text_tertiary !important;
+        }
+    }
+}
+
+%animate-right {
+    @include flex(row, center, center);
+    position: relative;
+    -webkit-transition: unset;
+    -moz-transition: unset;
+    -o-transition: unset;
+    transition: unset;
+
+    & > * {
+        @extend %ease;
+    }
+    
+    & > .icon {
+        @extend %ease;
+        margin-left: 5px;
+    }
+
+    &:hover {
+
+        & > .icon {
+            transform: translate(10px, 0);
+        }
+    }
+}
+
+%adjust-center {
+    @include flex(row, center, between);
+
+    & > * {
+        flex: 1;
+
+        &:nth-child(1) {
+            @include flex(row, center, start);
+            margin-right: auto;
+        }
+        
+        &:nth-child(2) {
+            @include flex(row, center, center);
+            flex: 2;
+        }
+        
+        &:nth-child(3) {
+            @include flex(row, center, end);
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.diamonds-sep {
+    @include flex(row, center, start);
+    position: relative;
+    width: 100%;
+    color: $accent_color_2;
+
+    .icon {
+        width: 100px;
+        height: 15px;
+    }
+    .diamonds-before,
+    .diamonds-after {
+        height: 1px;
+        background: $accent_color_2;
+    }
+
+    &.align-left {
+        .diamonds-before {
+            width: 50px;
+        }
+        .diamonds-after {
+            width: 100%;
+        }
+    }
+    &.align-center {
+        .diamonds-before {
+            flex: 1;
+        }
+        .diamonds-after {
+            flex: 1;
+        }
+    }
+    &.align-right {
+        .diamonds-before {
+            width: 100%;
+        }
+        .diamonds-after {
+            width: 50px;
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+---
+- import_tasks: import-content.yml
+  tags: wp-import-sample-content
+
+- import_tasks: activate-theme-plugins.yml
+  tags: wp-activate-plugins
+
+- import_tasks: update-settings.yml
+  tags: wp-update-settings
+# - import_tasks: self-signed-certificate.yml
+#   tags: wordpress-setup-self-signed-certificate
+# - import_tasks: nginx-client-cert.yml
+#   tags: wordpress-setup-nginx-client-cert

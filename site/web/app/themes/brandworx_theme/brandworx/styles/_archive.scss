@@ -1,0 +1,51 @@
+.archive-items, #archive_page .alm-reveal {
+    @include flex(col, center, start);
+    padding: 0 60px;
+}
+
+.archive-item {
+    @extend %container_lg;
+	position: relative;
+	width: 100%;
+    padding: 15px 0;
+    
+    .archive-item-thumb {
+        width: 45%;
+
+        @include respond-to(large, max){
+            width: 100%;
+        }
+    }
+
+    .archive-item-body {
+        width: 52%;
+
+        .archive-item-title {
+            margin-bottom: 10px;
+        }
+
+        .archive-item-excerpt {
+            text-align: justify;
+        }
+
+        @include respond-to(large, max){
+            width: 100%;
+        }
+    }
+	
+    &:nth-child(2n){
+        @include flex(row-rev, center, between);
+
+        @include respond-to(large, max){
+            @include flex(col, center, center);
+        }
+    }   
+    
+    &:nth-child(2n+1){
+        @include flex(row, center, between);
+
+        @include respond-to(large, max){
+            @include flex(col, center, center);
+        }
+    }   
+}

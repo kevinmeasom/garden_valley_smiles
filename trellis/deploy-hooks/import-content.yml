@@ -1,0 +1,44 @@
+# ---
+# - name: Export Dev DB
+#   command: wp @development db export
+#   delegate_to: localhost
+#   args:
+#     chdir: "{{ project_local_path }}"
+#   when: wp_installed.rc == 1
+#
+# - name: Install Composer dependencies
+#   command: composer install --no-ansi --no-dev --no-interaction --no-progress --optimize-autoloader --no-scripts
+#   args:
+#     chdir: "{{ deploy_helper.new_release_path }}/web/app/themes/sage"
+#
+# - name: Compile assets for production
+#   command: yarn build:production
+#   delegate_to: localhost
+#   args:
+#     chdir: "{{ project_local_path }}/web/app/themes/sage"
+#
+# - name: Copy production assets
+#   synchronize:
+#     src: "{{ project_local_path }}/web/app/themes/sage/dist"
+#     dest: "{{ deploy_helper.new_release_path }}/web/app/themes/sage"
+#     group: no
+#     owner: no
+#     rsync_opts: --chmod=Du=rwx,--chmod=Dg=rx,--chmod=Do=rx,--chmod=Fu=rw,--chmod=Fg=r,--chmod=Fo=r
+
+# - name: Reset database
+#   command: wp db reset --yes
+#   args:
+#     chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+#   with_dict: "{{ wordpress_sites }}"
+
+# - name: Import database
+#   command: wp db import dev-starter.sql
+#   args:
+#     chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+#   with_dict: "{{ wordpress_sites }}"
+
+# - name: Update database
+#   command: wp search-replace 'http:\/\/sitename.test' '{{ site_env.wp_home }}' --recurse-objects --precise --all-tables --allow-root
+#   args:
+#     chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+#   with_dict: "{{ wordpress_sites }}"

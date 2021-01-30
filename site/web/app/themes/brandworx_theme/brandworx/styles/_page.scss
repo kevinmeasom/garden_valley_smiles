@@ -1,0 +1,86 @@
+.page-space {
+    margin-top: 87px;
+}
+
+.page-banner {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    max-height: 650px;
+    min-height: 300px;
+
+    &.text-bottom {
+        @include flex(row, end, start);
+    }
+
+    &.text-center {
+        @include flex(row, center, start);
+
+        @include respond-to(medium, max){
+            @include flex(row, end, start);
+        }
+    }
+
+    &.overlay {
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $bg_gradient_white;
+            z-index: 0;
+        }
+    }
+
+    & > * {
+        z-index: 1;
+    }
+
+    .entry-header {
+        @extend %container_lg;
+    }
+
+    .page-quote {
+        position: relative;
+        font-size: 36px;
+        max-width: 500px;
+        z-index: 1;
+
+        .quote-text {
+            margin-bottom: 20px;
+
+            p {
+                font-size: 36px;
+                text-align: left;
+                line-height: 1.25em;
+                // quotes: "“" "”" "‘" "’";
+                                
+                // &::before {
+                //     content: open-quote;
+                // }
+                // &::after {
+                //     content: close-quote;
+                // }
+
+                @include respond-to(large, max){
+                    font-size: 22px;
+                }
+            }
+        }
+        
+        .quote-by {
+            text-align: right;
+        }
+
+        @include respond-to(large, max){
+            font-size: 22px;
+        }
+    }
+}
+
+.entry-content {
+    padding: 0 60px;
+}

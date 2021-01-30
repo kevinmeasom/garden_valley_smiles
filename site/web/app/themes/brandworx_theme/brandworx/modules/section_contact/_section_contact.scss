@@ -1,0 +1,94 @@
+#contact_section {
+    position: relative;
+    background: $bg_color;
+    padding: 100px;
+
+    .contact-container {
+        @extend %container;
+        @include flex(col, center, center);
+        max-width: 1175px;
+        width: 100%;
+
+        .contact-title {
+            font-size: $h1;
+            text-align: center;
+        }
+
+        .contact-text {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 615px;
+            margin: 0 auto;
+            background: $accent_color_2;
+            color: $secondary_color;
+            padding: 45px 60px;
+            box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.6);
+
+            h4 {
+                @extend %body_heading;
+            }
+
+            form {
+                nf-field {
+                    width: 100%;
+
+                    .nf-field-container {
+                        margin-bottom: 15px;
+
+                        .nf-field-label {
+                            margin: 0 !important;
+                        }
+                    }
+
+                    &:last-child {
+                        .nf-field-container {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    &:nth-child(2){
+                        width: 48%;
+                        float: left;
+                        clear: left;
+
+                        @include respond-to(medium, max){
+                            width: 100%;
+                            float: none;
+                            clear: both;
+                        }
+                    }
+                    &:nth-child(3){
+                        width: 48%;
+                        float: right;
+                        clear: right;
+
+                        @include respond-to(medium, max){
+                            width: 100%;
+                            float: none;
+                            clear: both;
+                        }
+                    }
+
+                    input {
+                        &[type="button"],
+                        &[type="submit"] {
+                            @extend %btn-primary;
+                        }
+                    }
+                }
+            }
+
+            @include respond-to(large, max){
+                padding: 20px;
+            }        
+        }
+    }
+
+    @include respond-to(large, max){
+        padding: 60px;
+    }
+}

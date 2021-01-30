@@ -1,0 +1,24 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  gvs.com:
+    site_hosts:
+      - canonical: gvs.test
+        redirects:
+          - www.gvs.test
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_user: brandworx
+    admin_email: kevin@brandworxmedia.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+    site_title: "Garden Valley Smiles"
+    tagline: ""
+    timezone: -7 #UTC offset
+    theme_name: "brando-child"
