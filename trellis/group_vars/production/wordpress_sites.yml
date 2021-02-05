@@ -9,7 +9,7 @@ wordpress_sites:
         redirects:
           - www.SITENAME.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: SSH_PATH_TO_REPO # replace with your Git repo URL
+    repo: git@github.com:kevinmeasom/garden_valley_smiles.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:

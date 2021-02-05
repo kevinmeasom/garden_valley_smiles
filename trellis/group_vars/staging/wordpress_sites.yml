@@ -3,13 +3,13 @@
 # Define accompanying passwords/secrets in group_vars/staging/vault.yml
 
 wordpress_sites:
-  IP_ADDRESS:
+  159.203.190.20:
     site_hosts:
-      - canonical: IP_ADDRESS
+      - canonical: 159.203.190.20
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: SSH_PATH_TO_REPO # replace with your Git repo URL
+    repo: git@github.com:kevinmeasom/garden_valley_smiles.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: staging
     multisite:
