@@ -2,4 +2,5 @@ mysql_root_password: "{{ vault_mysql_root_password }}" # Define this variable in
 deploy_finalize_after:
   - "{{ playbook_dir }}/roles/deploy/hooks/finalize-after.yml"
   - "{{ playbook_dir }}/deploy-hooks/install-wp.yml"
+  - "{{ playbook_dir }}/deploy-hooks/wp-migrate-db-pro.yml"
   - "{{ playbook_dir }}/deploy-hooks/uploads-permissions.yml"

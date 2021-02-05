@@ -1,0 +1,42 @@
+---
+- name: Activate wp-migrate-db-pro
+  command: wp plugin activate wp-migrate-db-pro --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  when: wp_installed.rc == 1
+
+- name: Activate wp-migrate-db-pro-media-files
+  command: wp plugin activate wp-migrate-db-pro-media-files --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  when: wp_installed.rc == 1
+
+- name: Activate wp-migrate-db-pro-cli
+  command: wp plugin activate wp-migrate-db-pro-cli --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"  
+  when: wp_installed.rc == 1
+
+- name: Add wp-migrate-db-pro license
+  command: wp migratedb setting update license eefca343-4179-48d8-8736-fa6574f0610a --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  when: wp_installed.rc == 1
+
+- name: Enable Pull Requests
+  command: wp migratedb setting update pull on --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  when: wp_installed.rc == 1
+
+- name: Enable Push Requests
+  command: wp migratedb setting update push on --allow-root
+  args:
+    chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  with_dict: "{{ wordpress_sites }}"
+  when: wp_installed.rc == 1
